@@ -44,6 +44,57 @@ img { max-width: 100%; display: block; }
   height: auto;
 }
 .shell { max-width: 1380px; margin: 0 auto; padding: 32px 28px 72px; }
+.site-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 4px 0 24px;
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.wordmark img {
+  width: 224px;
+  height: auto;
+  opacity: .92;
+}
+.wordmark-text {
+  display: grid;
+  gap: 2px;
+  padding-top: 18px;
+}
+.wordmark-text strong {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.wordmark-text span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.site-nav a {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+}
+.site-nav a:hover { color: var(--text); }
 .grid { display: grid; grid-template-columns: minmax(280px, 336px) minmax(0, 1fr); gap: 48px; align-items: start; }
 .sidebar { position: sticky; top: 24px; align-self: start; }
 .brand { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); margin-bottom: 18px; }
@@ -231,15 +282,28 @@ img { max-width: 100%; display: block; }
 .footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); display: grid; gap: 8px; color: var(--muted); }
 .footer .brandline { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
 @media (max-width: 1060px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .site-nav { gap: 16px; flex-wrap: wrap; }
   .grid { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .toc-list { max-height: none; }
   .hero, .preface, .section, .annex, .callout, .footer { width: 100%; }
-  .rail-mark { width: 190px; margin-left: auto; margin-right: auto; }
+  .wordmark img { width: 190px; }
+  .wordmark-text { padding-top: 0; }
 }
 @media (max-width: 720px) {
   body { font-size: 17px; }
   .shell { padding: 18px 16px 56px; }
+  .wordmark {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .wordmark img { width: 176px; }
   .hero { padding-top: 20px; padding-bottom: 20px; }
   .title { max-width: 13ch; }
   .hero-subdeck { max-width: 100%; margin-top: 10px; }
@@ -251,18 +315,30 @@ img { max-width: 100%; display: block; }
   .phase-band, .actor-band { padding-left: 12px; padding-right: 12px; }
   .phase-band .doc-p,
   .phase-band .doc-runin { font-size: 16px; }
-  .rail-mark { width: 176px; }
 }
 </style>
 </head>
 <body>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 <div class="shell">
+  <header class="site-header">
+    <a class="wordmark" href="../../" aria-label="Office of the Citizen homepage">
+      <img src="../../Office_of_the_Citizen_logo.png" alt="Office of the Citizen">
+      <div class="wordmark-text">
+        <strong>Office of the Citizen</strong>
+        <span>Evidence-based accountability archive</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../../">Home</a>
+      <a href="../../policy/electricity/">Policy</a>
+      <a href="#section-1-executive-summary">Archive</a>
+      <a href="#section-19-methodology-and-sources-note">Method</a>
+      <a href="#download-full-document">Download</a>
+    </nav>
+  </header>
   <div class="grid">
     <aside class="sidebar" aria-label="Section navigation">
-      <a class="rail-mark" href="../../" aria-label="Office of the Citizen homepage">
-        <img src="../../Office_of_the_Citizen_logo.png" alt="Office of the Citizen">
-      </a>
       <div class="toc-card">
         <h2>Contents</h2>
         <div class="toc-group">
