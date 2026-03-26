@@ -31,30 +31,17 @@ img { max-width: 100%; display: block; }
 ::selection { background: rgba(31,24,19,.12); }
 .progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 50; background: rgba(31,24,19,.06); }
 .progress > span { display: block; height: 100%; width: 0; background: rgba(31,24,19,.5); }
-.rail-mark {
-  display: block;
-  width: 224px;
-  max-width: 100%;
-  margin: 2px auto 20px;
-  opacity: .86;
-}
-.rail-mark img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .shell { max-width: 1380px; margin: 0 auto; padding: 32px 28px 72px; }
 .site-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: minmax(280px, 336px) minmax(0, 1fr);
+  align-items: start;
+  gap: 48px;
   padding: 4px 0 24px;
 }
 .wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
+  display: inline-block;
+  justify-self: center;
   text-decoration: none;
 }
 .wordmark img {
@@ -62,29 +49,11 @@ img { max-width: 100%; display: block; }
   height: auto;
   opacity: .92;
 }
-.wordmark-text {
-  display: grid;
-  gap: 2px;
-  padding-top: 18px;
-}
-.wordmark-text strong {
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.wordmark-text span {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
 .site-nav {
   display: flex;
   align-items: center;
   gap: 22px;
+  justify-self: end;
 }
 .site-nav a {
   font-family: var(--mono);
@@ -283,8 +252,7 @@ img { max-width: 100%; display: block; }
 .footer .brandline { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
 @media (max-width: 1060px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 16px;
   }
   .site-nav { gap: 16px; flex-wrap: wrap; }
@@ -293,15 +261,12 @@ img { max-width: 100%; display: block; }
   .toc-list { max-height: none; }
   .hero, .preface, .section, .annex, .callout, .footer { width: 100%; }
   .wordmark img { width: 190px; }
-  .wordmark-text { padding-top: 0; }
 }
 @media (max-width: 720px) {
   body { font-size: 17px; }
   .shell { padding: 18px 16px 56px; }
   .wordmark {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    justify-self: start;
   }
   .wordmark img { width: 176px; }
   .hero { padding-top: 20px; padding-bottom: 20px; }
@@ -324,10 +289,6 @@ img { max-width: 100%; display: block; }
   <header class="site-header">
     <a class="wordmark" href="../../" aria-label="Office of the Citizen homepage">
       <img src="../../Office_of_the_Citizen_logo.png" alt="Office of the Citizen">
-      <div class="wordmark-text">
-        <strong>Office of the Citizen</strong>
-        <span>Evidence-based accountability archive</span>
-      </div>
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="../../">Home</a>
