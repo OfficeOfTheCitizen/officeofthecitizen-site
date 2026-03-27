@@ -6,7 +6,7 @@
 <title>THE NIGERIA ELECTRICITY RESET 2026–2031 | Office of the Citizen</title>
 <meta name="description" content="A policy publication on Nigeria's electricity reset, presented as a calm, institutional longform page.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Manrope:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap');
 :root {
   --bg: #f5f1e8;
   --panel: #f8f5ed;
@@ -20,61 +20,133 @@
   --cyan-accent: #5E8F95;
   --warm-accent: #8A6B4A;
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --display: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
   --serif: 'Source Serif 4', Georgia, serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
-body { margin: 0; font-family: var(--serif); font-size: 18px; line-height: 1.72; letter-spacing: -0.005em; text-rendering: optimizeLegibility; }
+body { margin: 0; font-family: var(--serif); font-size: 18px; line-height: 1.72; letter-spacing: -0.005em; text-rendering: optimizeLegibility; overflow: hidden; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { opacity: 0.9; }
 img { max-width: 100%; display: block; }
 ::selection { background: rgba(31,24,19,.12); }
 .progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 50; background: rgba(31,24,19,.06); }
 .progress > span { display: block; height: 100%; width: 0; background: rgba(31,24,19,.5); }
-.shell { max-width: 1380px; margin: 0 auto; padding: 32px 28px 72px; }
+.shell { max-width: 1380px; height: 100vh; margin: 0 auto; padding: 32px 28px 24px; display: grid; grid-template-rows: auto minmax(0, 1fr); }
 .site-header {
-  display: grid;
-  grid-template-columns: minmax(280px, 336px) minmax(0, 1fr);
-  align-items: start;
-  gap: 48px;
-  padding: 4px 0 24px;
+  position: relative;
+  height: 208px;
+  padding: 22px 0 0;
+  border-bottom: 1px solid var(--line-strong);
 }
 .wordmark {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
   display: inline-block;
-  justify-self: center;
   text-decoration: none;
 }
 .wordmark img {
-  width: 224px;
+  width: 302px;
   height: auto;
   opacity: .92;
 }
-.site-nav {
+.menu {
+  position: absolute;
+  top: 92px;
+  right: 68px;
+  z-index: 10;
+}
+.menu-button {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(31,24,19,.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.36);
   display: flex;
   align-items: center;
-  gap: 22px;
-  justify-self: end;
+  justify-content: center;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color .16s ease, background-color .16s ease, box-shadow .16s ease;
 }
-.site-nav a {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .16em;
+.menu-button:hover,
+.menu-button[aria-expanded="true"] {
+  border-color: rgba(31,24,19,.2);
+  background: rgba(255,255,255,.18);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.48);
+}
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: var(--text);
+  content: "";
+  transition: transform .16s ease, opacity .16s ease;
+}
+.menu-icon { position: relative; }
+.menu-icon::before { position: absolute; top: -6px; left: 0; }
+.menu-icon::after { position: absolute; top: 6px; left: 0; }
+.menu.is-open .menu-icon { transform: rotate(45deg); }
+.menu.is-open .menu-icon::before { transform: rotate(90deg) translateX(-6px); }
+.menu.is-open .menu-icon::after { opacity: 0; }
+.menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 236px;
+  padding: 14px 16px;
+  border: 1px solid rgba(31,24,19,.12);
+  border-radius: 16px;
+  background: rgba(245,241,232,.96);
+  box-shadow: 0 14px 30px rgba(31,24,19,.04), inset 0 1px 0 rgba(255,255,255,.44);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 0s linear 160ms;
+}
+.menu.is-open .menu-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.menu-panel a {
+  display: block;
+  padding: 10px 2px;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: .14em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--muted);
+  transition: color .16s ease;
 }
-.site-nav a:hover { color: var(--text); }
-.grid { display: grid; grid-template-columns: minmax(280px, 336px) minmax(0, 1fr); gap: 48px; align-items: start; }
-.sidebar { position: sticky; top: 24px; align-self: start; }
+.menu-panel a:hover,
+.menu-panel a[aria-current="page"] { color: var(--text); }
+.page-scroll { min-height: 0; height: 100%; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; scroll-behavior: smooth; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.grid { display: grid; grid-template-columns: minmax(280px, 336px) minmax(0, 1fr); gap: 48px; align-items: start; min-height: 100%; }
+.sidebar { position: sticky; top: 18px; align-self: start; }
 .brand { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); margin-bottom: 18px; }
-.hero { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 30px 0 26px; margin-bottom: 22px; }
+.hero { border-bottom: 1px solid var(--line); padding: 30px 0 26px; margin-bottom: 22px; }
 .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
-.title { margin: 0; font-family: var(--mono); font-size: clamp(34px, 5vw, 74px); line-height: .92; letter-spacing: .05em; text-transform: uppercase; max-width: 15ch; }
+.title { margin: 0; font-family: var(--display); font-size: clamp(34px, 5vw, 74px); line-height: .92; letter-spacing: .015em; text-transform: uppercase; font-weight: 700; max-width: 15ch; }
 .title span { display: block; }
 .title-main { line-height: .9; }
-.title-emph { display: inline; font-size: 1.08em; letter-spacing: .035em; }
+.title-emph { display: inline; font-size: 1.08em; letter-spacing: .01em; }
 .hero-subdeck { margin-top: 10px; max-width: 28rem; }
-.subtitle { margin: 0; max-width: 100%; font-family: var(--mono); font-size: 12px; line-height: 1.62; letter-spacing: .11em; text-transform: none; color: rgba(31, 24, 19, 0.62); }
+.subtitle { margin: 0; max-width: 100%; font-family: var(--mono); font-size: 12px; line-height: 1.62; letter-spacing: .14em; font-weight: 400; text-transform: none; color: rgba(31, 24, 19, 0.62); }
 .meta { margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px 16px; max-width: 40rem; }
 .meta dl { margin: 0; }
 .meta dt { margin: 0 0 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); }
@@ -83,14 +155,14 @@ img { max-width: 100%; display: block; }
 .button { display: inline-flex; align-items: center; gap: 10px; padding: 11px 14px; border: 1px solid var(--line-strong); background: rgba(255,255,255,.22); font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; text-decoration: none; }
 .button:hover { background: rgba(255,255,255,.42); }
 .button.secondary { background: transparent; }
-.toc-card { border: 1px solid var(--line); background: rgba(255,255,255,.16); padding: 14px 14px 12px; }
+.toc-card { border: 1px solid var(--line); background: rgba(255,255,255,.16); padding: 14px 14px 12px; max-height: calc(100vh - 210px); overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: rgba(31,24,19,.18) transparent; }
+.toc-card::-webkit-scrollbar { width: 8px; }
+.toc-card::-webkit-scrollbar-track { background: transparent; }
+.toc-card::-webkit-scrollbar-thumb { background: rgba(31,24,19,.16); border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
 .toc-card h2 { margin: 0 0 10px; font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); }
 .toc-group + .toc-group { margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(31,24,19,.08); }
 .toc-group-label { margin: 0 0 7px; font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); }
-.toc-list { list-style: none; margin: 0; padding: 0; max-height: calc(100vh - 220px); overflow: auto; scrollbar-width: thin; scrollbar-color: rgba(31,24,19,.18) transparent; }
-.toc-list::-webkit-scrollbar { width: 8px; }
-.toc-list::-webkit-scrollbar-track { background: transparent; }
-.toc-list::-webkit-scrollbar-thumb { background: rgba(31,24,19,.16); border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
+.toc-list { list-style: none; margin: 0; padding: 0; max-height: none; overflow: visible; }
 .toc-list li + li { border-top: 1px solid rgba(31,24,19,.045); }
 .toc-list a { display: block; padding: 8px 10px 8px 11px; text-decoration: none; border-left: 2px solid transparent; transition: background-color .15s ease, border-color .15s ease, color .15s ease; }
 .toc-list a.active { color: var(--text); background: rgba(31,24,19,.05); border-left-color: var(--line-strong); }
@@ -99,7 +171,7 @@ img { max-width: 100%; display: block; }
 .toc-annex a { font-size: 12px; color: var(--muted); padding-top: 7px; padding-bottom: 7px; }
 .toc-annex a.active { color: var(--text); background: rgba(31,24,19,.025); }
 .leadin { margin: 18px 0 18px; max-width: 46rem; color: var(--muted); font-size: 16px; }
-.main { min-width: 0; display: flex; flex-direction: column; align-items: stretch; }
+.main { min-width: 0; display: flex; flex-direction: column; align-items: stretch; padding-right: 8px; }
 .hero, .preface, .section, .annex, .callout, .footer { width: min(100%, 940px); }
 .preface, .section, .annex { border-top: 1px solid var(--line); padding-top: 26px; margin-top: 28px; }
 .preface { padding-bottom: 6px; }
@@ -251,24 +323,29 @@ img { max-width: 100%; display: block; }
 .footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); display: grid; gap: 8px; color: var(--muted); }
 .footer .brandline { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
 @media (max-width: 1060px) {
+  body { overflow: auto; }
+  .shell { height: auto; min-height: 100vh; padding-bottom: 56px; display: block; }
   .site-header {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    height: 198px;
+    padding-top: 18px;
   }
-  .site-nav { gap: 16px; flex-wrap: wrap; }
-  .grid { grid-template-columns: 1fr; }
+  .wordmark img { width: 270px; }
+  .menu { top: 82px; right: 48px; }
+  .page-scroll { height: auto; overflow: visible; }
+  .grid { grid-template-columns: 1fr; min-height: 0; }
   .sidebar { position: static; }
+  .toc-card { max-height: none; overflow: visible; }
   .toc-list { max-height: none; }
   .hero, .preface, .section, .annex, .callout, .footer { width: 100%; }
-  .wordmark img { width: 190px; }
+  .main { padding-right: 0; }
 }
 @media (max-width: 720px) {
   body { font-size: 17px; }
   .shell { padding: 18px 16px 56px; }
-  .wordmark {
-    justify-self: start;
-  }
-  .wordmark img { width: 176px; }
+  .site-header { height: auto; padding: 18px 0 14px; }
+  .wordmark { position: relative; left: auto; top: auto; transform: none; display: block; width: 220px; margin: 0 auto; }
+  .wordmark img { width: 220px; }
+  .menu { position: relative; align-self: flex-end; margin-top: 16px; }
   .hero { padding-top: 20px; padding-bottom: 20px; }
   .title { max-width: 13ch; }
   .hero-subdeck { max-width: 100%; margin-top: 10px; }
@@ -288,16 +365,26 @@ img { max-width: 100%; display: block; }
 <div class="shell">
   <header class="site-header">
     <a class="wordmark" href="../../" aria-label="Office of the Citizen homepage">
-      <img src="../../Office_of_the_Citizen_logo.png" alt="Office of the Citizen">
+      <img src="../../officeofthecitizen-logo.png" alt="Office of the Citizen">
     </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="../../">Home</a>
-      <a href="../../policy/electricity/">Policy</a>
-      <a href="#section-1-executive-summary">Archive</a>
-      <a href="#section-19-methodology-and-sources-note">Method</a>
-      <a href="#download-full-document">Download</a>
-    </nav>
+    <div class="menu" data-menu>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="menu-panel" id="site-menu" aria-label="Site">
+        <a href="../../">Home</a>
+        <a href="../../archive/">Archive</a>
+        <a href="../../archive/methodology/">Methodology</a>
+        <a href="../../archive/transparency-index/">Transparency Index</a>
+        <a href="../../archive/governance-index/">Governance Index</a>
+        <a href="../../policy/electricity/" aria-current="page">Policy</a>
+        <a href="../../constitution/">Constitution</a>
+        <a href="../../projects/">Projects</a>
+        <a href="../../about/">About</a>
+      </nav>
+    </div>
   </header>
+  <div class="page-scroll">
   <div class="grid">
     <aside class="sidebar" aria-label="Section navigation">
       <div class="toc-card">
@@ -399,24 +486,54 @@ img { max-width: 100%; display: block; }
       </footer>
     </main>
   </div>
+  </div>
 </div>
 <script>
+document.querySelectorAll("[data-menu]").forEach((menu) => {
+  const button = menu.querySelector(".menu-button");
+  const panel = menu.querySelector(".menu-panel");
+  const setOpen = (open) => {
+    menu.classList.toggle("is-open", open);
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setOpen(!menu.classList.contains("is-open"));
+  });
+  panel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+});
+
 (() => {
+  const scroller = document.querySelector('.page-scroll');
   const links = Array.from(document.querySelectorAll('.toc-list a'));
   const targets = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   const progress = document.getElementById('progressBar');
   const tocMap = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const paneMode = () => window.matchMedia('(min-width: 1061px)').matches;
+  const getTop = el => paneMode()
+    ? el.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop
+    : el.getBoundingClientRect().top + window.scrollY;
   const setActive = id => {
     links.forEach(a => a.classList.remove('active'));
     const link = tocMap.get(id);
     if (link) link.classList.add('active');
   };
   const updateActive = () => {
-    const anchor = Math.max(120, window.innerHeight * 0.22);
+    const anchor = paneMode()
+      ? scroller.scrollTop + Math.max(120, scroller.clientHeight * 0.2)
+      : window.scrollY + Math.max(120, window.innerHeight * 0.22);
     let current = targets[0];
     for (const el of targets) {
-      const rect = el.getBoundingClientRect();
-      if (rect.top <= anchor) current = el;
+      const top = getTop(el);
+      if (top <= anchor) current = el;
       else break;
     }
     if (current) setActive(current.id);
@@ -430,8 +547,11 @@ img { max-width: 100%; display: block; }
     });
   };
   const updateProgress = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    const max = paneMode()
+      ? scroller.scrollHeight - scroller.clientHeight
+      : document.documentElement.scrollHeight - window.innerHeight;
+    const current = paneMode() ? scroller.scrollTop : window.scrollY;
+    const pct = max > 0 ? (current / max) * 100 : 0;
     progress.style.width = Math.min(100, Math.max(0, pct)) + '%';
   };
   const wrapRuns = (sectionId, bandClassBase, headingMatcher) => {
@@ -470,14 +590,25 @@ img { max-width: 100%; display: block; }
       nodes.forEach(node => band.appendChild(node));
     });
   };
-  updateProgress();
-  updateActive();
   wrapRuns('section-4-phased-implementation-strategy', 'phase-band', text => /^Phase \d+:/.test(text));
   wrapRuns('section-9-resistance-map-who-loses-and-how-they-fight-back', 'actor-band', text => /^9\.\d+ /.test(text));
-  window.addEventListener('scroll', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      if (paneMode()) {
+        event.preventDefault();
+        scroller.scrollTo({ top: Math.max(0, getTop(target) - 18), behavior: 'smooth' });
+        if (history.pushState) history.pushState(null, '', link.getAttribute('href'));
+      }
+    });
+  });
+  const onScroll = () => {
     updateProgress();
     scheduleActive();
-  }, { passive: true });
+  };
+  scroller.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', () => {
     updateProgress();
     scheduleActive();
@@ -486,6 +617,12 @@ img { max-width: 100%; display: block; }
     updateProgress();
     updateActive();
   });
+  if (paneMode() && window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) scroller.scrollTop = Math.max(0, getTop(target) - 18);
+  }
+  updateProgress();
+  updateActive();
 })();
 </script>
 </body>

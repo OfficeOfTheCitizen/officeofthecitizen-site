@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance Index | The Archive</title>
+  <meta name="description" content="Governance Index placeholder." />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap");
+    :root { --paper:#f3efea; --ink:#171615; --muted-ink:rgba(23,22,21,.72); --line-strong:rgba(23,22,21,.18); --sans:"IBM Plex Sans",Arial,Helvetica,sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:var(--serif); }
+    a { color:inherit; text-decoration:none; }
+    .page { min-height:100vh; background:var(--paper); }
+    .line { height:1px; margin:228px 18px 0; background:var(--line-strong); }
+    .header { position:relative; height:208px; }
+    .logo { position:absolute; left:50%; top:22px; transform:translateX(-50%); width:302px; }
+    .logo img { width:100%; display:block; }
+    .menu { position:absolute; top:92px; right:68px; z-index:10; }
+    .menu-button { width:48px; height:48px; border:1px solid rgba(23,22,21,.12); border-radius:999px; background:rgba(255,255,255,.12); box-shadow:inset 0 1px 0 rgba(255,255,255,.36); display:flex; align-items:center; justify-content:center; cursor:pointer; appearance:none; transition:border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease; }
+    .menu-button:hover, .menu-button[aria-expanded="true"] { border-color:rgba(23,22,21,.2); background:rgba(255,255,255,.18); box-shadow:inset 0 1px 0 rgba(255,255,255,.48); }
+    .menu-icon, .menu-icon::before, .menu-icon::after { display:block; width:18px; height:1px; background:var(--ink); content:""; transition:transform 160ms ease, opacity 160ms ease; }
+    .menu-icon { position:relative; }
+    .menu-icon::before { position:absolute; top:-6px; left:0; }
+    .menu-icon::after { position:absolute; top:6px; left:0; }
+    .menu.is-open .menu-icon { transform:rotate(45deg); }
+    .menu.is-open .menu-icon::before { transform:rotate(90deg) translateX(-6px); }
+    .menu.is-open .menu-icon::after { opacity:0; }
+    .menu-panel { position:absolute; top:calc(100% + 10px); right:0; min-width:236px; padding:14px 16px; border:1px solid rgba(23,22,21,.12); border-radius:16px; background:rgba(243,239,234,.96); box-shadow:0 14px 30px rgba(23,22,21,.04), inset 0 1px 0 rgba(255,255,255,.44); z-index:20; opacity:0; visibility:hidden; pointer-events:none; transform:translateY(-4px); transition:opacity 160ms ease, transform 160ms ease, visibility 0s linear 160ms; }
+    .menu.is-open .menu-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0); transition-delay:0s; }
+    .menu-panel a { display:block; padding:10px 2px; font-family:var(--sans); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-ink); transition:color 160ms ease; }
+    .menu-panel a:hover, .menu-panel a[aria-current="page"] { color:var(--ink); }
+    .main { width:min(100%,1180px); margin:0 auto; padding:30px 28px 80px; text-align:center; }
+    .eyebrow { font-family:var(--sans); font-size:15px; letter-spacing:.18em; text-transform:uppercase; font-weight:500; }
+    h1 { margin:40px auto 0; max-width:980px; font-family:var(--serif); font-size:78px; line-height:1.065; font-weight:400; letter-spacing:-.05em; }
+    p { margin:42px auto 0; max-width:820px; font-size:27px; line-height:1.54; text-align:justify; text-justify:inter-word; hyphens:auto; }
+    .cta { margin-top:42px; display:inline-flex; min-width:220px; height:64px; align-items:center; justify-content:center; padding:0 28px; border-radius:12px; border:1px solid rgba(23,22,21,.12); background:rgba(255,255,255,.1); box-shadow:inset 0 1px 0 rgba(255,255,255,.34); font-family:var(--sans); font-size:17px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-ink); }
+    @media (max-width:760px){ .line{margin:188px 16px 0;} .header{height:auto; padding:32px 20px 18px;} .logo{position:relative; left:auto; top:auto; transform:none; width:220px; margin:0 auto;} .menu{position:relative; display:flex; justify-content:flex-end; margin-top:16px;} .main{padding:46px 20px 80px;} h1{font-size:44px; line-height:1.08;} p{font-size:20px; line-height:1.58;} .cta{width:100%; max-width:340px; min-width:0; font-size:15px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="../../" aria-label="Office of the Citizen homepage">
+        <img src="../../officeofthecitizen-logo.png" alt="Office of the Citizen logo" />
+      </a>
+      <div class="menu" data-menu>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="menu-panel" id="site-menu" aria-label="Site">
+          <a href="../../">Home</a>
+          <a href="../">Archive</a>
+          <a href="../methodology/">Methodology</a>
+          <a href="../transparency-index/">Transparency Index</a>
+          <a href="../governance-index/" aria-current="page">Governance Index</a>
+          <a href="../../policy/electricity/">Policy</a>
+          <a href="../../constitution/">Constitution</a>
+          <a href="../../projects/">Projects</a>
+          <a href="../../about/">About</a>
+        </nav>
+      </div>
+    </header>
+    <div class="line" aria-hidden="true"></div>
+    <main class="main">
+      <div class="eyebrow">Governance Index</div>
+      <h1>The Governance Index will be published here.</h1>
+      <p>This route is reserved for future governance scoring, case synthesis, and institution-level assessment built from the Archive’s structured public record.</p>
+      <a class="cta" href="../">Return to the Archive</a>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll("[data-menu]").forEach((menu) => {
+      const button = menu.querySelector(".menu-button");
+      const panel = menu.querySelector(".menu-panel");
+      const setOpen = (open) => {
+        menu.classList.toggle("is-open", open);
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+      };
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        setOpen(!menu.classList.contains("is-open"));
+      });
+      panel.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setOpen(false));
+      });
+      document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target)) setOpen(false);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setOpen(false);
+      });
+    });
+  </script>
+</body>
+</html>
