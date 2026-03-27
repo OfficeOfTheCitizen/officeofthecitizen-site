@@ -33,10 +33,32 @@
       font-family: var(--serif);
       -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
+      overflow: hidden;
     }
     a { color: inherit; text-decoration: none; }
-    .page { min-height: 100vh; background: var(--paper); display: flex; flex-direction: column; }
-    .header { position: relative; height: 208px; padding: 34px 118px 0; flex: 0 0 auto; }
+    .page {
+      height: 100vh;
+      background: var(--paper);
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      overflow: hidden;
+    }
+    .header {
+      position: relative;
+      height: 228px;
+      padding: 34px 118px 0;
+      flex: 0 0 auto;
+    }
+    .header::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 0;
+      height: 1px;
+      background: var(--line-strong);
+      pointer-events: none;
+    }
     .logo-wrap {
       position: absolute;
       top: 22px;
@@ -122,12 +144,17 @@
     }
     .menu-panel a:hover,
     .menu-panel a[aria-current="page"] { color: var(--ink); }
-    .line { height: 1px; margin: 228px 18px 0; background: var(--line-strong); flex: 0 0 auto; }
     .main {
       width: min(100%, 1180px);
       margin: 0 auto;
       padding: 42px 28px 88px;
-      min-height: calc(100vh - 229px);
+      min-height: 0;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-gutter: stable;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
       display: flex;
       flex-direction: column;
     }
@@ -236,7 +263,10 @@
       .hero-copy { font-size: 21px; }
     }
     @media (max-width: 760px) {
+      body { overflow: auto; }
+      .page { height: auto; min-height: 100vh; display: block; overflow: visible; }
       .header { height: auto; padding: 32px 20px 18px; }
+      .header::after { left: 16px; right: 16px; }
       .logo-wrap {
         position: relative;
         top: auto;
@@ -254,8 +284,12 @@
         top: auto;
         right: auto;
       }
-      .line { margin: 188px 16px 0; }
-      .main { padding: 40px 20px 84px; }
+      .main {
+        padding: 40px 20px 84px;
+        height: auto;
+        min-height: auto;
+        overflow: visible;
+      }
       .hero-eyebrow { margin-bottom: 18px; font-size: 13px; }
       .hero h1 { font-size: 42px; line-height: 1.08; }
       .hero-copy { margin-top: 26px; font-size: 19px; line-height: 1.68; }
@@ -295,7 +329,6 @@
         </nav>
       </div>
     </header>
-    <div class="line" aria-hidden="true"></div>
     <main class="main">
       <section class="hero">
         <p class="hero-eyebrow">The Archive</p>
