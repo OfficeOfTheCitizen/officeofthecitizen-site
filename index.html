@@ -36,6 +36,7 @@
       font-family: Georgia, "Times New Roman", serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
+      overflow: hidden;
     }
 
     a {
@@ -46,25 +47,28 @@
     .page {
       position: relative;
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
       background: var(--paper);
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
       overflow: hidden;
-    }
-
-    .frame-header-divider {
-      position: absolute;
-      top: 228px;
-      left: var(--frame-edge);
-      right: var(--frame-edge);
-      height: 1px;
-      background: var(--frame-strong);
-      pointer-events: none;
     }
 
     .header {
       position: relative;
-      height: 208px;
+      height: 228px;
       padding: 34px 118px 0;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      left: var(--frame-edge);
+      right: var(--frame-edge);
+      bottom: 0;
+      height: 1px;
+      background: var(--frame-strong);
+      pointer-events: none;
     }
 
     .logo-wrap {
@@ -206,6 +210,13 @@
 
     .hero {
       position: relative;
+      min-height: 0;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-gutter: stable;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
       padding-top: 66px;
       padding-bottom: 178px;
       display: flex;
@@ -339,7 +350,7 @@
       .header {
         padding-left: 48px;
         padding-right: 48px;
-        height: 198px;
+        height: 228px;
       }
 
       .logo-wrap {
@@ -351,10 +362,6 @@
       .menu {
         top: 82px;
         right: 48px;
-      }
-
-      .frame-header-divider {
-        top: 208px;
       }
 
       .hero {
@@ -378,11 +385,8 @@
     }
 
     @media (max-width: 760px) {
-      .frame-header-divider {
-        left: 16px;
-        right: 16px;
-        width: auto;
-      }
+      body { overflow: auto; }
+      .page { height: auto; min-height: 100vh; display: block; overflow: visible; }
 
       .header {
         height: auto;
@@ -390,6 +394,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      .header::after {
+        left: 16px;
+        right: 16px;
       }
 
       .logo-wrap {
@@ -408,11 +417,9 @@
         margin-top: 16px;
       }
 
-      .frame-header-divider {
-        top: 188px;
-      }
-
       .hero {
+        height: auto;
+        overflow: visible;
         padding: 66px 20px 80px 20px;
       }
 
@@ -468,8 +475,6 @@
 </head>
 <body>
   <div class="page">
-    <div class="frame-line frame-header-divider"></div>
-
     <header class="header">
       <div class="logo-wrap">
         <img src="/officeofthecitizen-logo.png" alt="Office of the Citizen logo" />
