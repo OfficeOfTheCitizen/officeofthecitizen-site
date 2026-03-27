@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accountability Index | Office of the Citizen</title>
+  <meta
+    name="description"
+    content="Instrument specification and scoring manual for the Archive Accountability Index."
+  >
+  <link rel="stylesheet" href="/archive/assets/archive-doc.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Office of the Citizen homepage">
+        <img src="/officeofthecitizen-logo.png" alt="Office of the Citizen">
+      </a>
+      <div class="menu" data-menu>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="menu-panel" id="site-menu" aria-label="Site">
+          <a href="/">Home</a>
+          <a href="/archive/">Archive</a>
+          <a href="/archive/methodology/">Methodology</a>
+          <a href="/archive/accountability-index/" aria-current="page">Accountability Index</a>
+          <a href="/archive/governance-diagnostics/">Governance Diagnostics</a>
+          <a href="/policy/electricity/">Policy</a>
+          <a href="/constitution/">Constitution</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-scroll">
+      <div class="grid">
+        <aside class="sidebar" aria-label="Section navigation">
+          <div class="toc-card">
+            <h2>Contents</h2>
+            <div class="toc-group">
+              <div class="toc-group-label">Document Sections</div>
+              <ul class="toc-list toc-main">
+                <li><a href="#section-1-overview"><span>Overview</span></a></li>
+                <li><a href="#section-2-document-map"><span>Document Map</span></a></li>
+                <li><a href="#section-3-what-it-measures"><span>What It Measures</span></a></li>
+                <li><a href="#section-4-structure-and-formula"><span>Structure and Formula</span></a></li>
+                <li><a href="#section-5-impact-score"><span>Impact Score</span></a></li>
+                <li><a href="#section-6-accountability-score"><span>Accountability Score</span></a></li>
+                <li><a href="#section-7-decay-and-rules"><span>Decay and Rules</span></a></li>
+                <li><a href="#section-8-workflow-and-reporting"><span>Workflow and Reporting</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main">
+          <header class="hero" id="section-1-overview">
+            <div class="kicker">Accountability Index</div>
+            <h1 class="title">
+              <span class="title-main">Instrument Specification</span>
+              <span>and Scoring Manual</span>
+            </h1>
+            <div class="hero-subdeck">
+              <p class="subtitle">The 100 Archive Project · Evidence-based scoring for accountability failure</p>
+            </div>
+            <div class="meta" aria-label="Document metadata">
+              <dl><dt>Version</dt><dd>1.1</dd></dl>
+              <dl><dt>Year</dt><dd>2026</dd></dl>
+              <dl><dt>Office</dt><dd>Office of the Citizen</dd></dl>
+              <dl><dt>Partner</dt><dd>Polymath Pictures</dd></dl>
+            </div>
+            <div class="download-bar">
+              <a class="button secondary" href="#section-3-what-it-measures">Begin Reading</a>
+            </div>
+            <p class="doc-p" style="margin-top:20px;">
+              The Accountability Index exists to answer a diagnostic question Nigerian governance analysis has rarely answered with method: when something went wrong, how did the system respond? It measures the gap between event severity and accountability response, case by case, institution by institution, sector by sector, and year by year.
+            </p>
+          </header>
+
+          <section class="section" id="section-2-document-map">
+            <div class="note">Document Map</div>
+            <h2 class="doc-h2">The scoring manual’s chapter architecture</h2>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Accountability Index chapter map">
+                <thead>
+                  <tr><th>Chapter</th><th>Coverage</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Purpose — What the Index Measures and Why</td></tr>
+                  <tr><td>2</td><td>The Three-Instrument Framework</td></tr>
+                  <tr><td>3</td><td>The Two-Part Structure — Impact and Accountability</td></tr>
+                  <tr><td>4</td><td>The Impact Score — Five Dimensions</td></tr>
+                  <tr><td>5</td><td>The Accountability Score — Five Dimensions</td></tr>
+                  <tr><td>6</td><td>The Accountability Deficit Formula</td></tr>
+                  <tr><td>7</td><td>Decay Weighting</td></tr>
+                  <tr><td>8</td><td>Formal and Political Accountability</td></tr>
+                  <tr><td>9</td><td>Scoring Rules and Evidence Anchors</td></tr>
+                  <tr><td>10</td><td>The Visual Accountability Profile</td></tr>
+                  <tr><td>11</td><td>Scoring Workflow</td></tr>
+                  <tr><td>12</td><td>Updating Index Scores as Cases Evolve</td></tr>
+                  <tr><td>13</td><td>System-Level Aggregation</td></tr>
+                  <tr><td>14</td><td>The Nigeria Accountability Index Report</td></tr>
+                  <tr><td>15</td><td>Bias Controls Specific to the Index</td></tr>
+                  <tr><td>16</td><td>What Cannot Be Changed Without Full Editorial Board Vote</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-3-what-it-measures">
+            <div class="note">Chapters 1–2</div>
+            <h2 class="doc-h2">What the Index measures</h2>
+            <p class="doc-p">
+              The Index does not measure corruption. It measures accountability failure: the systematic gap between how serious a governance failure was and how seriously the system treated it. That makes it fundamentally different from perception-based governance indices and from general rankings of states or institutions by “goodness” or “badness.”
+            </p>
+            <p class="doc-p">
+              The specification distinguishes three instruments used by the Archive. The Case Qualification Threshold asks whether something belongs in the Archive at all. The Case Importance Score asks how important a case is relative to others. The Accountability Index asks what the documented case reveals about the system’s accountability performance.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Three instrument framework">
+                <thead>
+                  <tr><th>Instrument</th><th>Applied when</th><th>Question answered</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Case Qualification Threshold</td><td>At intake, before research begins</td><td>Should this be an Archive case at all?</td></tr>
+                  <tr><td>Case Importance Score (CIS)</td><td>At intake, after threshold passes</td><td>How important is this case relative to others?</td></tr>
+                  <tr><td>Accountability Index</td><td>At publication and updated as cases evolve</td><td>What does this case reveal about the system’s accountability performance?</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-4-structure-and-formula">
+            <div class="note">Chapters 3 &amp; 6</div>
+            <h2 class="doc-h2">Structure and formula</h2>
+            <p class="doc-p">
+              Every case produces two scores reported separately and then combined. The Impact Score measures how serious the event was. The Accountability Score measures how well the system responded. Their difference is the Accountability Deficit. The separate reporting matters because events with the same deficit can imply very different institutional diagnoses.
+            </p>
+            <p class="doc-runin"><span class="doc-label">Formula</span><span>Accountability Deficit = Impact Score − Accountability Score. Reporting range: −25 to +25, with very large surpluses capped in aggregate reporting so outliers do not distort system-level analysis.</span></p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Deficit classification">
+                <thead>
+                  <tr><th>Range</th><th>Classification</th><th>Interpretation</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>20 to 25</td><td>Critical Deficit</td><td>The system almost entirely failed to respond to a very serious event.</td></tr>
+                  <tr><td>15 to 19</td><td>Severe Deficit</td><td>Very serious event with minimal accountability response.</td></tr>
+                  <tr><td>10 to 14</td><td>High Deficit</td><td>Significant event with weak accountability response.</td></tr>
+                  <tr><td>5 to 9</td><td>Moderate Deficit</td><td>Some institutional action occurred, but incompletely.</td></tr>
+                  <tr><td>0</td><td>Balanced</td><td>Impact and accountability response are in approximate balance.</td></tr>
+                  <tr><td>Below 0</td><td>Accountability Surplus</td><td>The system responded more rigorously than the event strictly required.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-5-impact-score">
+            <div class="note">Chapter 4</div>
+            <h2 class="doc-h2">The Impact Score</h2>
+            <p class="doc-p">
+              The Impact Score has five dimensions, each scored 0–5, for a maximum of 25. Each dimension must be anchored to a specific primary source. The score is assigned by the Research Director and confirmed by the Editorial Lead at publication.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Impact dimensions">
+                <thead>
+                  <tr><th>Dimension</th><th>What it measures</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Human Impact</td><td>Direct physical, health, or livelihood harm to people caused by the documented failure</td></tr>
+                  <tr><td>Financial Impact</td><td>Documented loss of public funds, economic damage to public resources, or value of public goods denied</td></tr>
+                  <tr><td>Institutional Impact</td><td>Damage to the functional capacity or structural integrity of public institutions</td></tr>
+                  <tr><td>Democratic Impact</td><td>Damage to democratic norms, processes, and rights</td></tr>
+                  <tr><td>Public Trust Impact</td><td>Damage to citizen confidence in trust-critical institutions, assessed by institutional role and nature of the violation rather than polling</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-6-accountability-score">
+            <div class="note">Chapter 5</div>
+            <h2 class="doc-h2">The Accountability Score</h2>
+            <p class="doc-p">
+              The Accountability Score also has five dimensions, each scored 0–5, for a maximum of 25. It is the only score routinely updated as cases evolve, because accountability responses unfold over time. The absence of action is itself a documentable finding, not an editorial flourish.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Accountability dimensions">
+                <thead>
+                  <tr><th>Dimension</th><th>What it measures</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>A1 — Investigation</td><td>Whether and how seriously the relevant institution investigated the documented failure</td></tr>
+                  <tr><td>A2 — Transparency</td><td>Whether findings, evidence, and accountability processes were made public</td></tr>
+                  <tr><td>A3 — Consequences</td><td>Whether named responsible parties faced formal institutional consequences proportionate to the severity of the failure</td></tr>
+                  <tr><td>A4 — Institutional Reform</td><td>Whether the failure led to documented policy, legal, procedural, or structural changes that reduce recurrence</td></tr>
+                  <tr><td>A5 — Time to Response</td><td>The weighted timeliness of investigation, findings, consequences, and reform stages</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              Formal accountability and political accountability are kept distinct. Officials losing elections, resigning under public pressure, or facing party discipline are documented on the case page, but they do not increase the Accountability Score unless formal proceedings also occurred.
+            </p>
+          </section>
+
+          <section class="section" id="section-7-decay-and-rules">
+            <div class="note">Chapters 7–9</div>
+            <h2 class="doc-h2">Decay weighting and scoring rules</h2>
+            <p class="doc-p">
+              The Index is designed to resist gaming. Investigations announced but never concluded, prosecutions commenced but stalled, or reforms enacted only on paper lose score over time through decay weighting. The point is to document reality rather than reward symbolic motion.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Decay schedule">
+                <thead>
+                  <tr><th>Trigger</th><th>Decay effect</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Investigation opened but no findings within 36 months</td><td>A1 reduced by 2 points</td></tr>
+                  <tr><td>Investigation opened but no findings within 60 months</td><td>A1 reduced to 0</td></tr>
+                  <tr><td>Prosecution commenced but no judgment within 60 months</td><td>A3 reduced by 2 points</td></tr>
+                  <tr><td>Reform enacted but no implementation evidence within 24 months</td><td>A4 reduced by 1 point</td></tr>
+                  <tr><td>Reform body dissolved or defunded within 36 months</td><td>A4 reduced by 2 points</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-runin"><span class="doc-label">Non-negotiable rule</span><span>No score on any Index dimension may be assigned without a specific primary source cited in the Research File. Where evidence is missing, the score is 0 and the missing source is documented transparently.</span></p>
+          </section>
+
+          <section class="section" id="section-8-workflow-and-reporting">
+            <div class="note">Chapters 10–16</div>
+            <h2 class="doc-h2">Workflow and reporting</h2>
+            <p class="doc-p">
+              Every published case carries a Visual Accountability Profile so readers can see the accountability shape of the case at a glance. The scoring workflow is deliberately separated: the Research Director assigns the Impact Score first, a different editor assigns the Accountability Score second, both are cross-checked against the Governance Outcome Classification and Pattern Detection Tags, and only then is the deficit calculated.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Index outputs">
+                <thead>
+                  <tr><th>Output</th><th>Function</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Visual Accountability Profile</td><td>Six-axis visual summary of each case</td></tr>
+                  <tr><td>Living score updates</td><td>Quarterly and event-triggered score revisions as accountability processes evolve</td></tr>
+                  <tr><td>Institution-Level Profiles</td><td>Published only once five or more cases exist for an institution</td></tr>
+                  <tr><td>Annual Nigeria Accountability Index Report</td><td>Sector, institution, state, administration, political accountability, and annual diagnosis analysis</td></tr>
+                  <tr><td>Protected elements</td><td>The formula, evidence-anchor rule, double-blind scoring, decay schedule, and other core rules cannot be changed without full Editorial Board vote</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              The Annual Diagnosis is the report’s most important section. It identifies exactly where accountability breaks down by combining dimension-level score patterns with Pattern Detection Tag analysis. That turns the Index from a database of scores into a diagnostic map of Nigerian accountability failure.
+            </p>
+          </section>
+
+          <footer class="footer">
+            <div class="brandline">Source Authority</div>
+            <div>The 100 Archive Project · Accountability Index · Version 1.1 · 2026</div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="/archive/assets/archive-doc.js"></script>
+</body>
+</html>

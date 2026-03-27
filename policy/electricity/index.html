@@ -33,24 +33,40 @@ img { max-width: 100%; display: block; }
 ::selection { background: rgba(31,24,19,.12); }
 .progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 50; background: rgba(31,24,19,.06); }
 .progress > span { display: block; height: 100%; width: 0; background: rgba(31,24,19,.5); }
-.shell { max-width: 1380px; height: 100vh; margin: 0 auto; padding: 32px 28px 24px; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.shell { max-width: 1380px; height: 100vh; margin: 0 auto; padding: 0 28px 24px; display: grid; grid-template-rows: auto minmax(0, 1fr); }
 .site-header {
   position: relative;
-  height: 208px;
-  padding: 22px 0 0;
-  border-bottom: 1px solid var(--line-strong);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 228px;
+  padding: 34px 0 0;
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--line-strong);
 }
 .wordmark {
   position: absolute;
   left: 50%;
-  top: 16px;
+  top: 22px;
   transform: translateX(-50%);
-  display: inline-block;
+  width: 302px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 .wordmark img {
-  width: 302px;
+  width: 100%;
   height: auto;
+  object-fit: contain;
   opacity: .92;
 }
 .menu {
@@ -327,9 +343,10 @@ img { max-width: 100%; display: block; }
   .shell { height: auto; min-height: 100vh; padding-bottom: 56px; display: block; }
   .site-header {
     height: 198px;
-    padding-top: 18px;
+    padding-top: 0;
   }
-  .wordmark img { width: 270px; }
+  .wordmark { top: 36px; width: 270px; height: 150px; }
+  .wordmark img { width: 100%; }
   .menu { top: 82px; right: 48px; }
   .page-scroll { height: auto; overflow: visible; }
   .grid { grid-template-columns: 1fr; min-height: 0; }
@@ -341,10 +358,10 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 720px) {
   body { font-size: 17px; }
-  .shell { padding: 18px 16px 56px; }
-  .site-header { height: auto; padding: 18px 0 14px; }
-  .wordmark { position: relative; left: auto; top: auto; transform: none; display: block; width: 220px; margin: 0 auto; }
-  .wordmark img { width: 220px; }
+  .shell { padding: 0 16px 56px; }
+  .site-header { height: auto; padding: 32px 0 18px; }
+  .wordmark { position: relative; left: auto; top: auto; transform: none; display: flex; width: 220px; height: auto; margin: 0 auto; }
+  .wordmark img { width: 100%; }
   .menu { position: relative; align-self: flex-end; margin-top: 16px; }
   .hero { padding-top: 20px; padding-bottom: 20px; }
   .title { max-width: 13ch; }
@@ -364,23 +381,23 @@ img { max-width: 100%; display: block; }
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 <div class="shell">
   <header class="site-header">
-    <a class="wordmark" href="../../" aria-label="Office of the Citizen homepage">
-      <img src="../../officeofthecitizen-logo.png" alt="Office of the Citizen">
+    <a class="wordmark" href="/" aria-label="Office of the Citizen homepage">
+      <img src="/officeofthecitizen-logo.png" alt="Office of the Citizen">
     </a>
     <div class="menu" data-menu>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav class="menu-panel" id="site-menu" aria-label="Site">
-        <a href="../../">Home</a>
-        <a href="../../archive/">Archive</a>
-        <a href="../../archive/methodology/">Methodology</a>
-        <a href="../../archive/transparency-index/">Transparency Index</a>
-        <a href="../../archive/governance-index/">Governance Index</a>
-        <a href="../../policy/electricity/" aria-current="page">Policy</a>
-        <a href="../../constitution/">Constitution</a>
-        <a href="../../projects/">Projects</a>
-        <a href="../../about/">About</a>
+        <a href="/">Home</a>
+        <a href="/archive/">Archive</a>
+        <a href="/archive/methodology/">Methodology</a>
+        <a href="/archive/accountability-index/">Accountability Index</a>
+        <a href="/archive/governance-diagnostics/">Governance Diagnostics</a>
+        <a href="/policy/electricity/" aria-current="page">Policy</a>
+        <a href="/constitution/">Constitution</a>
+        <a href="/projects/">Projects</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
   </header>

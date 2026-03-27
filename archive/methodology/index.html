@@ -1,113 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Methodology | The Archive</title>
-  <meta name="description" content="Archive methodology placeholder." />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap");
-    :root {
-      --paper: #f3efea;
-      --ink: #171615;
-      --muted-ink: rgba(23, 22, 21, 0.72);
-      --line-strong: rgba(23, 22, 21, 0.18);
-      --sans: "IBM Plex Sans", Arial, Helvetica, sans-serif;
-      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; min-height: 100%; background: var(--paper); color: var(--ink); }
-    body { font-family: var(--serif); }
-    a { color: inherit; text-decoration: none; }
-    .page { min-height: 100vh; background: var(--paper); }
-    .line { height: 1px; margin: 228px 18px 0; background: var(--line-strong); }
-    .header { position: relative; height: 208px; }
-    .logo { position: absolute; left: 50%; top: 22px; transform: translateX(-50%); width: 302px; }
-    .logo img { width: 100%; display: block; }
-    .menu { position: absolute; top: 92px; right: 68px; z-index: 10; }
-    .menu-button { width: 48px; height: 48px; border: 1px solid rgba(23,22,21,.12); border-radius: 999px; background: rgba(255,255,255,.12); box-shadow: inset 0 1px 0 rgba(255,255,255,.36); display: flex; align-items: center; justify-content: center; cursor: pointer; appearance: none; transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease; }
-    .menu-button:hover, .menu-button[aria-expanded="true"] { border-color: rgba(23,22,21,.2); background: rgba(255,255,255,.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.48); }
-    .menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 18px; height: 1px; background: var(--ink); content: ""; transition: transform 160ms ease, opacity 160ms ease; }
-    .menu-icon { position: relative; }
-    .menu-icon::before { position: absolute; top: -6px; left: 0; }
-    .menu-icon::after { position: absolute; top: 6px; left: 0; }
-    .menu.is-open .menu-icon { transform: rotate(45deg); }
-    .menu.is-open .menu-icon::before { transform: rotate(90deg) translateX(-6px); }
-    .menu.is-open .menu-icon::after { opacity: 0; }
-    .menu-panel { position: absolute; top: calc(100% + 10px); right: 0; min-width: 236px; padding: 14px 16px; border: 1px solid rgba(23,22,21,.12); border-radius: 16px; background: rgba(243,239,234,.96); box-shadow: 0 14px 30px rgba(23,22,21,.04), inset 0 1px 0 rgba(255,255,255,.44); z-index: 20; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-4px); transition: opacity 160ms ease, transform 160ms ease, visibility 0s linear 160ms; }
-    .menu.is-open .menu-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); transition-delay: 0s; }
-    .menu-panel a { display: block; padding: 10px 2px; font-family: var(--sans); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-ink); transition: color 160ms ease; }
-    .menu-panel a:hover, .menu-panel a[aria-current="page"] { color: var(--ink); }
-    .main { width: min(100%, 1180px); margin: 0 auto; padding: 30px 28px 80px; text-align: center; }
-    .eyebrow { font-family: var(--sans); font-size: 15px; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
-    h1 { margin: 40px auto 0; max-width: 980px; font-family: var(--serif); font-size: 78px; line-height: 1.065; font-weight: 400; letter-spacing: -.05em; }
-    p { margin: 42px auto 0; max-width: 820px; font-size: 27px; line-height: 1.54; text-align: justify; text-justify: inter-word; hyphens: auto; }
-    .cta { margin-top: 42px; display: inline-flex; min-width: 220px; height: 64px; align-items: center; justify-content: center; padding: 0 28px; border-radius: 12px; border: 1px solid rgba(23,22,21,.12); background: rgba(255,255,255,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.34); font-family: var(--sans); font-size: 17px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-ink); }
-    @media (max-width: 760px) {
-      .line { margin: 188px 16px 0; }
-      .header { height: auto; padding: 32px 20px 18px; }
-      .logo { position: relative; left: auto; top: auto; transform: none; width: 220px; margin: 0 auto; }
-      .menu { position: relative; display: flex; justify-content: flex-end; margin-top: 16px; }
-      .main { padding: 46px 20px 80px; }
-      h1 { font-size: 44px; line-height: 1.08; }
-      p { font-size: 20px; line-height: 1.58; }
-      .cta { width: 100%; max-width: 340px; min-width: 0; font-size: 15px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive Methodology | Office of the Citizen</title>
+  <meta
+    name="description"
+    content="The binding editorial methodology and operating standard for The 100 Archive Project."
+  >
+  <link rel="stylesheet" href="/archive/assets/archive-doc.css">
 </head>
 <body>
-  <div class="page">
-    <header class="header">
-      <a class="logo" href="../../" aria-label="Office of the Citizen homepage">
-        <img src="../../officeofthecitizen-logo.png" alt="Office of the Citizen logo" />
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Office of the Citizen homepage">
+        <img src="/officeofthecitizen-logo.png" alt="Office of the Citizen">
       </a>
       <div class="menu" data-menu>
         <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
           <span class="menu-icon" aria-hidden="true"></span>
         </button>
         <nav class="menu-panel" id="site-menu" aria-label="Site">
-          <a href="../../">Home</a>
-          <a href="../">Archive</a>
-          <a href="../methodology/" aria-current="page">Methodology</a>
-          <a href="../transparency-index/">Transparency Index</a>
-          <a href="../governance-index/">Governance Index</a>
-          <a href="../../policy/electricity/">Policy</a>
-          <a href="../../constitution/">Constitution</a>
-          <a href="../../projects/">Projects</a>
-          <a href="../../about/">About</a>
+          <a href="/">Home</a>
+          <a href="/archive/">Archive</a>
+          <a href="/archive/methodology/" aria-current="page">Methodology</a>
+          <a href="/archive/accountability-index/">Accountability Index</a>
+          <a href="/archive/governance-diagnostics/">Governance Diagnostics</a>
+          <a href="/policy/electricity/">Policy</a>
+          <a href="/constitution/">Constitution</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
         </nav>
       </div>
     </header>
-    <div class="line" aria-hidden="true"></div>
-    <main class="main">
-      <div class="eyebrow">Methodology</div>
-      <h1>The Archive methodology will be published here.</h1>
-      <p>This route is reserved for the methodological framework behind Archive entries, evidence handling, publication standards, and revision logic.</p>
-      <a class="cta" href="../">Return to the Archive</a>
-    </main>
+
+    <div class="page-scroll">
+      <div class="grid">
+        <aside class="sidebar" aria-label="Section navigation">
+          <div class="toc-card">
+            <h2>Contents</h2>
+            <div class="toc-group">
+              <div class="toc-group-label">Document Sections</div>
+              <ul class="toc-list toc-main">
+                <li><a href="#section-1-overview"><span>Overview</span></a></li>
+                <li><a href="#section-2-document-map"><span>Document Map</span></a></li>
+                <li><a href="#section-3-purpose-and-scope"><span>Purpose and Scope</span></a></li>
+                <li><a href="#section-4-accountability-framework"><span>Accountability Framework</span></a></li>
+                <li><a href="#section-5-taxonomy-and-threshold"><span>Taxonomy and Threshold</span></a></li>
+                <li><a href="#section-6-evidence-and-confidence"><span>Evidence and Confidence</span></a></li>
+                <li><a href="#section-7-research-and-review"><span>Research and Review</span></a></li>
+                <li><a href="#section-8-template-and-lifecycle"><span>Template and Lifecycle</span></a></li>
+                <li><a href="#section-9-outputs-and-governance"><span>Outputs and Governance</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main">
+          <header class="hero" id="section-1-overview">
+            <div class="kicker">Archive Methodology</div>
+            <h1 class="title">
+              <span class="title-main">The 100 Archive Project</span>
+            </h1>
+            <div class="hero-subdeck">
+              <p class="subtitle">Editorial Methodology and Operating Standard · A Comprehensive Framework for Evidence-Based Civic Accountability Documentation in Nigeria</p>
+            </div>
+            <div class="meta" aria-label="Document metadata">
+              <dl><dt>Version</dt><dd>1.3</dd></dl>
+              <dl><dt>Year</dt><dd>2026</dd></dl>
+              <dl><dt>Office</dt><dd>Office of the Citizen</dd></dl>
+              <dl><dt>Jurisdiction</dt><dd>Nigeria and United Kingdom</dd></dl>
+            </div>
+            <div class="download-bar">
+              <a class="button secondary" href="#section-3-purpose-and-scope">Begin Reading</a>
+            </div>
+            <p class="doc-p" style="margin-top:20px;">
+              This document is publicly available and binding. It governs every editorial decision made by The 100 Archive Project. It defines what qualifies as a case, how responsibility is named, what evidence is sufficient, how entries are reviewed, how they are corrected, and how they remain permanent in the public record.
+            </p>
+          </header>
+
+          <section class="section" id="section-2-document-map">
+            <div class="note">Document Map</div>
+            <h2 class="doc-h2">The methodology’s chapter architecture</h2>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Methodology chapter map">
+                <thead>
+                  <tr><th>Chapter</th><th>Coverage</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Purpose and Scope</td></tr>
+                  <tr><td>2</td><td>The Three-Tier Accountability Framework</td></tr>
+                  <tr><td>3</td><td>Case Taxonomy — 12 Sectors, Governance Outcome Classification, Pattern Detection Tags</td></tr>
+                  <tr><td>4</td><td>Case Qualification — The Threshold Rule</td></tr>
+                  <tr><td>5</td><td>The Case Importance Score (CIS)</td></tr>
+                  <tr><td>6</td><td>Publication Slot Allocation</td></tr>
+                  <tr><td>7</td><td>Evidence Standards and Source Classification</td></tr>
+                  <tr><td>8</td><td>Confidence Ratings</td></tr>
+                  <tr><td>9</td><td>The Sensitivity Tier System</td></tr>
+                  <tr><td>10</td><td>Entry Selection, Triage, and the 12-Pilot Launch Protocol</td></tr>
+                  <tr><td>11</td><td>The Research Process, Research File, and Editorial Traceability Log</td></tr>
+                  <tr><td>12</td><td>The Standard Case Template — Three-Layer Structure, Versioning, Network Map</td></tr>
+                  <tr><td>13</td><td>Document Preservation and Source Archiving</td></tr>
+                  <tr><td>14</td><td>Protecting Sources and Whistleblowers</td></tr>
+                  <tr><td>15</td><td>Social Media and Viral Claims</td></tr>
+                  <tr><td>16</td><td>Freedom of Information — The FOI Escalation Ladder</td></tr>
+                  <tr><td>17</td><td>Handling Living and Former Officials</td></tr>
+                  <tr><td>18</td><td>The Right-of-Reply Process</td></tr>
+                  <tr><td>19</td><td>The Four-Stage Editorial Review — Phase 2</td></tr>
+                  <tr><td>20</td><td>Entry States and Lifecycle</td></tr>
+                  <tr><td>21</td><td>Public Contribution and Moderation — Phase 3</td></tr>
+                  <tr><td>22</td><td>Disputes, Corrections, and Withdrawal — Phase 4</td></tr>
+                  <tr><td>23</td><td>Bias Controls and Skewness Management</td></tr>
+                  <tr><td>24</td><td>Writing Style and Language Standards</td></tr>
+                  <tr><td>25</td><td>Nigerian-Specific Challenges</td></tr>
+                  <tr><td>26</td><td>Governance</td></tr>
+                  <tr><td>27</td><td>Outputs</td></tr>
+                  <tr><td>28</td><td>Scaling to Africa</td></tr>
+                  <tr><td>29</td><td>Annual Methodology Review</td></tr>
+                  <tr><td>30</td><td>Worked Example — A Complete Coded Case</td></tr>
+                  <tr><td>31</td><td>Labelling and Metadata Doctrine — Classification Standard</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-3-purpose-and-scope">
+            <div class="note">Chapter 1</div>
+            <h2 class="doc-h2">Purpose and scope</h2>
+            <p class="doc-p">
+              The 100 Archive Project is a public record of civic consequence in Nigeria’s Fourth Republic. It documents how power is exercised, identifies responsibility across the accountability chain, preserves evidence trails, and enables diagnostic analysis of institutions and democratic systems.
+            </p>
+            <p class="doc-p">
+              The Archive is not a scandal vault. It is not a news site. It is not a political tool. It is a civic record: the permanent, sourced, structured documentation that functional democracies require and that Nigeria’s democratic history has never had in this form.
+            </p>
+            <p class="doc-runin"><span class="doc-label">The Rule</span><span>An archive that documents only failures becomes cynicism. This Archive documents failures, contested events, reforms, positive precedents, and institutional conduct. It is a record of democracy in practice: what worked, what failed, who was responsible, and what changed.</span></p>
+            <p class="doc-p">
+              The methodology fixes the Archive’s scope on Nigeria first, 1999 to the present, and covers public institutions plus non-state actors where they materially shape public outcomes. It explicitly governs all editorial staff, contributors, partners, researchers, fact-checkers, and interns with editorial responsibility.
+            </p>
+            <ul class="doc-list">
+              <li>Federal and state institutions, ministries, departments, and agencies</li>
+              <li>The judiciary at all levels</li>
+              <li>The National Assembly and state legislatures</li>
+              <li>INEC and state electoral bodies</li>
+              <li>Security agencies</li>
+              <li>Contractors, political parties, corporations, and development partners where their conduct materially shapes public outcomes</li>
+            </ul>
+          </section>
+
+          <section class="section" id="section-4-accountability-framework">
+            <div class="note">Chapter 2</div>
+            <h2 class="doc-h2">The accountability framework</h2>
+            <p class="doc-p">
+              Every case must attempt to answer three accountability questions. Where a question cannot be answered, the gap becomes part of the permanent record. The methodology maps responsibility independently by tier rather than inferring upward or downward without documentary support.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Accountability tiers">
+                <thead>
+                  <tr><th>Tier</th><th>Question</th><th>Typical actors</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tier 1</td><td>Policy Responsibility: who designed the rule, policy, mandate, or decision path?</td><td>President, governors, ministers, policy-setting regulators</td></tr>
+                  <tr><td>Tier 2</td><td>Institutional Responsibility: who led the institution that should have prevented or handled it?</td><td>Directors-general, commission chairpersons, institutional heads</td></tr>
+                  <tr><td>Tier 3</td><td>Operational Responsibility: who executed the action or omission?</td><td>Department heads, local officials, contract supervisors, implementation authorities</td></tr>
+                  <tr><td>Tier 4</td><td>Structural Failure: where individual responsibility cannot be identified because the system made accountability impossible</td><td>Used only with Editorial Board approval</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              Every tier attribution must be grounded in a Class A or Class B source. Where a contractor, private company, political party, or other non-state actor materially shapes the outcome of a governance failure, they are documented as a contributing actor, while the public official who authorised, contracted, or supervised them remains the operationally responsible party.
+            </p>
+          </section>
+
+          <section class="section" id="section-5-taxonomy-and-threshold">
+            <div class="note">Chapters 3–4</div>
+            <h2 class="doc-h2">Taxonomy and threshold</h2>
+            <p class="doc-p">
+              Every case is assigned one primary sector, may carry up to three secondary sector tags, must carry one Governance Outcome Classification, and must carry at least one Pattern Detection Tag. These tags prevent thematic drift and make later sector-level, institution-level, and pattern-level analysis possible.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Methodology taxonomy">
+                <thead>
+                  <tr><th>Primary sectors</th><th>Core structural fields</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Elections, judiciary, finance, procurement, infrastructure, education, health, security, rights, policy decisions, institutional conduct, environment</td><td>Governance Outcome Classification: Institutional Success, Institutional Resilience, Institutional Failure, Institutional Misconduct, Institutional Breakdown. Pattern tags include Procurement Failure, Regulatory Capture, Judicial Delay, Political Interference, Bureaucratic Breakdown, Accountability Evasion, and Positive Precedent.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              A case qualifies if it is documentable, civic in consequence, and meets two of four triggers: democratic relevance, institutional relevance, public impact, or precedent value. The threshold is intentionally designed to allow procurement failures, child deaths, court judgments, reforms, and symbolic institutional conduct to coexist without the Archive becoming noise.
+            </p>
+          </section>
+
+          <section class="section" id="section-6-evidence-and-confidence">
+            <div class="note">Chapters 7–9</div>
+            <h2 class="doc-h2">Evidence and confidence</h2>
+            <p class="doc-p">
+              The naming standard cuts both ways. A person may only be named as a responsible party where primary source evidence places them in the described role at the described time. Naming is mandatory where that evidence exists and prohibited where it does not.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Evidence classes">
+                <thead>
+                  <tr><th>Class</th><th>Evidence standard</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Class A</td><td>Court judgments, tribunal rulings, audit reports, budgets, appropriation acts, gazettes, procurement records, Hansard, sealed official correspondence, FOI responses, formally published EFCC or ICPC findings, INEC publications, CBN and regulatory notices</td></tr>
+                  <tr><td>Class B</td><td>Government press releases, annual reports, formally tabled parliamentary committee reports, regulatory agency notices</td></tr>
+                  <tr><td>Class C</td><td>Investigative journalism with cited underlying documents, peer-reviewed research, credible international reports with documented methodology</td></tr>
+                  <tr><td>Class D</td><td>Credible reporting without named primary sources, civil society reports with partial documentation, ongoing legal filings</td></tr>
+                  <tr><td>Class E</td><td>Named testimony, community reports with corroborating detail, verified photographic or video evidence</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              To publish a case as documented, the Archive requires at minimum one independent Class A source plus at least one supporting source of Class B or higher. Every factual claim must be independently corroborated. Every Research File must also record the Best Missing Document: what source should exist, what legal or procedural requirement mandates it, and what steps were taken to obtain it.
+            </p>
+            <p class="doc-runin"><span class="doc-label">Confidence Ratings</span><span>Every published case carries a visible confidence rating: Verified, Strong, Moderate, Contested, or Under Review. The rating is not decorative. It is a public statement of evidential depth and limitation.</span></p>
+          </section>
+
+          <section class="section" id="section-7-research-and-review">
+            <div class="note">Chapters 10–11, 18–19</div>
+            <h2 class="doc-h2">Research and review</h2>
+            <p class="doc-p">
+              Cases enter through four channels: internal research, journalist submission, CSO submission, and public tips after the first 100 entries are published. Every intake is assessed within 10 working days against the threshold rule and given an initial CIS score before research begins.
+            </p>
+            <p class="doc-p">
+              The methodology requires a 12-pilot launch protocol rather than an immediate bulk launch. Twelve pilot cases, one from each sector, are used to test the full methodology, audit gaps, calibrate scoring consistency, and certify launch readiness before public release.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Research and review workflow">
+                <thead>
+                  <tr><th>Stage</th><th>Requirement</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Research File</td><td>Every case must have a permanent file containing the proposal form, source pack, evidence log, Best Missing Document, FOI log, right-of-reply record, review records, legal review where applicable, publication authorisation, traceability log, and all updates</td></tr>
+                  <tr><td>Traceability</td><td>Every editorial action is named, dated, and attributable to a specific person; no case may publish with a traceability field blank</td></tr>
+                  <tr><td>Right of reply</td><td>Mandatory, not courteous; named parties receive a formal notice and documented response window</td></tr>
+                  <tr><td>Four-stage review</td><td>Research Director review, blind review, Editorial Lead review, and legal or Board review where required</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="section-8-template-and-lifecycle">
+            <div class="note">Chapters 12–13, 20–22</div>
+            <h2 class="doc-h2">Template and lifecycle</h2>
+            <p class="doc-p">
+              Every published case carries mandatory structural fields including case ID, version number, title, date range, sector, governance outcome classification, pattern detection tags, geography, CIS score, confidence rating, entry status, sensitivity tier, institutions involved, non-state actors, the event, the institutional chain, the evidence, the outcome, the governance question, citizen action, right of reply log, and change log.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Three-layer entry structure">
+                <thead>
+                  <tr><th>Layer</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Layer 1 — The Record</td><td>Pure factual narrative of what happened, in plain language, without accountability mapping or analysis</td></tr>
+                  <tr><td>Layer 2 — The Institutional Map</td><td>The accountability chain, the evidence pack, and the documented outcome</td></tr>
+                  <tr><td>Layer 3 — The Governance Insight</td><td>The accountability question and the diagnostic note: what the case reveals about the system</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              Entries are never deleted. They move through documented states: Active, Contested, Under Review, Resolved, Superseded, and Closed. Every version remains publicly accessible. The change log records every update with date, reason, and authorising editor.
+            </p>
+            <p class="doc-p">
+              Document preservation is part of the publication standard itself. Every primary source must exist in three forms before publication: the original location, a downloaded copy on the Archive’s secure server, and an archived copy submitted to the Internet Archive.
+            </p>
+          </section>
+
+          <section class="section" id="section-9-outputs-and-governance">
+            <div class="note">Chapters 23–27</div>
+            <h2 class="doc-h2">Outputs and governance</h2>
+            <p class="doc-p">
+              The methodology is explicit about bias, selection pressure, and the evidential limits of what an archive can document. Its answer is not denial. It is coverage targets, documentation availability notes, non-response tracking, quarterly sampling audits, and an Annual Bias Audit conducted by an Advisory Board member who did not serve as an editor during the period under review.
+            </p>
+            <div class="table-wrap">
+              <table class="doc-table" aria-label="Methodology outputs">
+                <thead>
+                  <tr><th>Output</th><th>Function</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>The Archive</td><td>The structured, searchable public database of cases with version history and confidence ratings</td></tr>
+                  <tr><td>The FOI Tracker</td><td>A standalone public database of every FOI request filed by the Archive</td></tr>
+                  <tr><td>Annual State of Accountability Report</td><td>Sector, institution, geography, and bias analysis built from the case base</td></tr>
+                  <tr><td>Institution-Level Accountability Index</td><td>A later-phase output released only when the Archive has sufficient depth</td></tr>
+                  <tr><td>Sector Reports</td><td>Thematic outputs on areas such as elections, judiciary, procurement, and education</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="doc-p">
+              Editorial authority is constitutionally separated from institutional governance. The Editorial Lead has final publication authority for Tier 1 and Tier 2 entries. The full Editorial Board has publication authority for Tier 3 entries. No governance body may direct or attempt to influence editorial decisions.
+            </p>
+          </section>
+
+          <footer class="footer">
+            <div class="brandline">Source Authority</div>
+            <div>The 100 Archive Project · Editorial Methodology and Operating Standard · Version 1.3 · 2026</div>
+          </footer>
+        </main>
+      </div>
+    </div>
   </div>
-  <script>
-    document.querySelectorAll("[data-menu]").forEach((menu) => {
-      const button = menu.querySelector(".menu-button");
-      const panel = menu.querySelector(".menu-panel");
-      const setOpen = (open) => {
-        menu.classList.toggle("is-open", open);
-        button.setAttribute("aria-expanded", open ? "true" : "false");
-      };
-      button.addEventListener("click", (event) => {
-        event.stopPropagation();
-        setOpen(!menu.classList.contains("is-open"));
-      });
-      panel.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => setOpen(false));
-      });
-      document.addEventListener("click", (event) => {
-        if (!menu.contains(event.target)) setOpen(false);
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setOpen(false);
-      });
-    });
-  </script>
+  <script src="/archive/assets/archive-doc.js"></script>
 </body>
 </html>

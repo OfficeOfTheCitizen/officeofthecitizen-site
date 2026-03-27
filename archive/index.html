@@ -4,16 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Archive | Office of the Citizen</title>
-  <meta name="description" content="The Archive is Office of the Citizen's permanent civic record of public consequence in Nigeria." />
+  <meta
+    name="description"
+    content="The Archive is Office of the Citizen's permanent civic record of public consequence in Nigeria."
+  />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap");
+
     :root {
       --paper: #f3efea;
       --ink: #171615;
       --muted-ink: rgba(23, 22, 21, 0.72);
       --line: rgba(23, 22, 21, 0.12);
       --line-strong: rgba(23, 22, 21, 0.18);
-      --frame-edge: 18px;
       --sans: "IBM Plex Sans", Arial, Helvetica, sans-serif;
       --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
     }
@@ -32,30 +35,8 @@
       text-rendering: geometricPrecision;
     }
     a { color: inherit; text-decoration: none; }
-
-    .page {
-      position: relative;
-      min-height: 100vh;
-      background: var(--paper);
-      overflow: hidden;
-    }
-
-    .frame-header-divider {
-      position: absolute;
-      top: 228px;
-      left: var(--frame-edge);
-      right: var(--frame-edge);
-      height: 1px;
-      background: var(--line-strong);
-      pointer-events: none;
-    }
-
-    .header {
-      position: relative;
-      height: 208px;
-      padding: 34px 118px 0;
-    }
-
+    .page { min-height: 100vh; background: var(--paper); display: flex; flex-direction: column; }
+    .header { position: relative; height: 208px; padding: 34px 118px 0; flex: 0 0 auto; }
     .logo-wrap {
       position: absolute;
       top: 22px;
@@ -67,21 +48,8 @@
       align-items: center;
       justify-content: center;
     }
-
-    .logo-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .menu {
-      position: absolute;
-      top: 92px;
-      right: 68px;
-      z-index: 10;
-    }
-
+    .logo-wrap img { display: block; width: 100%; height: auto; object-fit: contain; }
+    .menu { position: absolute; top: 92px; right: 68px; z-index: 10; }
     .menu-button {
       width: 48px;
       height: 48px;
@@ -94,19 +62,14 @@
       justify-content: center;
       cursor: pointer;
       appearance: none;
-      transition:
-        border-color 160ms ease,
-        background-color 160ms ease,
-        box-shadow 160ms ease;
+      transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
     }
-
     .menu-button:hover,
     .menu-button[aria-expanded="true"] {
       border-color: rgba(23, 22, 21, 0.2);
       background: rgba(255, 255, 255, 0.18);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48);
     }
-
     .menu-icon,
     .menu-icon::before,
     .menu-icon::after {
@@ -117,58 +80,29 @@
       content: "";
       transition: transform 160ms ease, opacity 160ms ease;
     }
-
-    .menu-icon {
-      position: relative;
-    }
-
-    .menu-icon::before {
-      position: absolute;
-      top: -6px;
-      left: 0;
-    }
-
-    .menu-icon::after {
-      position: absolute;
-      top: 6px;
-      left: 0;
-    }
-
-    .menu.is-open .menu-icon {
-      transform: rotate(45deg);
-    }
-
-    .menu.is-open .menu-icon::before {
-      transform: rotate(90deg) translateX(-6px);
-    }
-
-    .menu.is-open .menu-icon::after {
-      opacity: 0;
-    }
-
+    .menu-icon { position: relative; }
+    .menu-icon::before { position: absolute; top: -6px; left: 0; }
+    .menu-icon::after { position: absolute; top: 6px; left: 0; }
+    .menu.is-open .menu-icon { transform: rotate(45deg); }
+    .menu.is-open .menu-icon::before { transform: rotate(90deg) translateX(-6px); }
+    .menu.is-open .menu-icon::after { opacity: 0; }
     .menu-panel {
       position: absolute;
       top: calc(100% + 10px);
       right: 0;
-      min-width: 218px;
+      min-width: 250px;
       padding: 14px 16px;
       border: 1px solid rgba(23, 22, 21, 0.12);
       border-radius: 16px;
       background: rgba(243, 239, 234, 0.96);
-      box-shadow:
-        0 14px 30px rgba(23, 22, 21, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.44);
+      box-shadow: 0 14px 30px rgba(23, 22, 21, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.44);
       z-index: 20;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
       transform: translateY(-4px);
-      transition:
-        opacity 160ms ease,
-        transform 160ms ease,
-        visibility 0s linear 160ms;
+      transition: opacity 160ms ease, transform 160ms ease, visibility 0s linear 160ms;
     }
-
     .menu.is-open .menu-panel {
       opacity: 1;
       visibility: visible;
@@ -176,7 +110,6 @@
       transform: translateY(0);
       transition-delay: 0s;
     }
-
     .menu-panel a {
       display: block;
       padding: 10px 2px;
@@ -187,85 +120,66 @@
       color: var(--muted-ink);
       transition: color 160ms ease;
     }
-
     .menu-panel a:hover,
-    .menu-panel a[aria-current="page"] {
-      color: var(--ink);
-    }
-
+    .menu-panel a[aria-current="page"] { color: var(--ink); }
+    .line { height: 1px; margin: 228px 18px 0; background: var(--line-strong); flex: 0 0 auto; }
     .main {
       width: min(100%, 1180px);
       margin: 0 auto;
-      padding: 26px 28px 104px;
+      padding: 42px 28px 88px;
       min-height: calc(100vh - 229px);
       display: flex;
       flex-direction: column;
-      gap: 40px;
     }
-
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 100%;
+      max-width: 1020px;
+      margin: 0 auto;
       text-align: center;
-      padding-top: 40px;
-      padding-bottom: 0;
-      margin-bottom: auto;
     }
-
-    .hero-eyebrow {
+    .hero-eyebrow,
+    .meta {
       font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1;
-      letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-weight: 500;
-      color: var(--ink);
+      letter-spacing: 0.16em;
     }
-
     .hero-eyebrow {
-      margin: 0 0 40px;
+      margin: 0 0 22px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 500;
     }
-
     .hero h1 {
       margin: 0;
-      width: 100%;
-      max-width: 1040px;
-      font-family: var(--serif);
       font-size: 78px;
-      line-height: 1.065;
+      line-height: 1.04;
       font-weight: 400;
       letter-spacing: -0.05em;
-      color: var(--ink);
     }
-
-    .hero-copy,
-    .section-copy {
-      width: 100%;
-      max-width: 940px;
-      margin: 0;
-      font-size: 27px;
-      line-height: 1.54;
+    .hero-copy {
+      margin: 34px auto 0;
+      max-width: 920px;
+      font-size: 25px;
+      line-height: 1.64;
       text-align: justify;
       text-justify: inter-word;
       hyphens: auto;
-      color: var(--ink);
     }
-
-    .hero-copy {
-      margin-top: 42px;
+    .meta {
+      margin-top: 24px;
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--muted-ink);
     }
-
     .cta-row {
       margin-top: auto;
-      padding-top: 8px;
+      padding-top: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
     }
-
     .button-primary,
     .button-secondary,
     .button-tertiary {
@@ -287,96 +201,42 @@
         color 160ms ease,
         transform 160ms ease;
     }
-
     .button-primary {
-      min-width: 248px;
+      min-width: 244px;
       padding: 0 34px;
       border: 1px solid var(--line-strong);
       background: rgba(255, 255, 255, 0.18);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.46),
-        inset 0 10px 24px rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), inset 0 10px 24px rgba(255, 255, 255, 0.08);
       color: var(--ink);
     }
-
     .button-primary:hover {
       border-color: rgba(23, 22, 21, 0.28);
       background: rgba(255, 255, 255, 0.24);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.58),
-        inset 0 12px 28px rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58), inset 0 12px 28px rgba(255, 255, 255, 0.1);
       transform: translateY(-1px);
     }
-
     .button-secondary,
     .button-tertiary {
+      min-width: 258px;
+      padding: 0 28px;
       border: 1px solid rgba(23, 22, 21, 0.12);
       background: rgba(255, 255, 255, 0.1);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
       color: var(--muted-ink);
     }
-
-    .button-secondary {
-      min-width: 284px;
-      padding: 0 26px;
-    }
-
-    .button-tertiary {
-      min-width: 258px;
-      padding: 0 24px;
-    }
-
     .button-secondary:hover,
     .button-tertiary:hover {
       border-color: rgba(23, 22, 21, 0.2);
-      background: rgba(255, 255, 255, 0.14);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.44);
-      color: rgba(23, 22, 21, 0.86);
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--ink);
+      transform: translateY(-1px);
     }
-
-    @media (max-width: 1200px) {
-      .header {
-        padding-left: 48px;
-        padding-right: 48px;
-        height: 198px;
-      }
-
-      .logo-wrap {
-        width: 270px;
-      }
-
-      .menu {
-        top: 82px;
-        right: 48px;
-      }
-
-      .frame-header-divider {
-        top: 208px;
-      }
-
-      .hero h1 {
-        max-width: 880px;
-        font-size: 62px;
-      }
-
-      .hero-copy {
-        max-width: 820px;
-        font-size: 23px;
-      }
+    @media (max-width: 980px) {
+      .hero h1 { font-size: 58px; }
+      .hero-copy { font-size: 21px; }
     }
-
     @media (max-width: 760px) {
-      .frame-header-divider {
-        top: 188px;
-        left: 16px;
-        right: 16px;
-      }
-
-      .header {
-        height: auto;
-        padding: 32px 20px 18px;
-      }
-
+      .header { height: auto; padding: 32px 20px 18px; }
       .logo-wrap {
         position: relative;
         top: auto;
@@ -386,46 +246,27 @@
         height: auto;
         margin: 0 auto;
       }
-
       .menu {
         position: relative;
-        align-self: flex-end;
+        display: flex;
+        justify-content: flex-end;
         margin-top: 16px;
+        top: auto;
+        right: auto;
       }
-
-      .main {
-        padding: 46px 20px 80px;
-      }
-
-      .hero-eyebrow,
-      .section-label {
-        font-size: 15px;
-        letter-spacing: 0.16em;
-      }
-
-      .hero h1 {
-        max-width: 100%;
-        font-size: 44px;
-        line-height: 1.08;
-      }
-
-      .hero-copy,
-      .section-copy {
-        max-width: 100%;
-        font-size: 20px;
-        line-height: 1.58;
-      }
-
-      .cta-row {
-        flex-direction: column;
-      }
-
+      .line { margin: 188px 16px 0; }
+      .main { padding: 40px 20px 84px; }
+      .hero-eyebrow { margin-bottom: 18px; font-size: 13px; }
+      .hero h1 { font-size: 42px; line-height: 1.08; }
+      .hero-copy { margin-top: 26px; font-size: 19px; line-height: 1.68; }
+      .meta { font-size: 11px; }
+      .cta-row { padding-top: 48px; }
       .button-primary,
       .button-secondary,
       .button-tertiary {
-        min-width: 0;
         width: 100%;
         max-width: 340px;
+        min-width: 0;
         font-size: 15px;
       }
     }
@@ -433,44 +274,46 @@
 </head>
 <body>
   <div class="page">
-    <div class="frame-header-divider" aria-hidden="true"></div>
-
     <header class="header">
-      <a class="logo-wrap" href="../" aria-label="Office of the Citizen homepage">
-        <img src="../officeofthecitizen-logo.png" alt="Office of the Citizen logo" />
+      <a class="logo-wrap" href="/" aria-label="Office of the Citizen homepage">
+        <img src="/officeofthecitizen-logo.png" alt="Office of the Citizen logo" />
       </a>
       <div class="menu" data-menu>
         <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
           <span class="menu-icon" aria-hidden="true"></span>
-          </button>
+        </button>
         <nav class="menu-panel" id="site-menu" aria-label="Site">
-          <a href="../">Home</a>
-          <a href="../archive/" aria-current="page">Archive</a>
-          <a href="../archive/methodology/">Methodology</a>
-          <a href="../archive/transparency-index/">Transparency Index</a>
-          <a href="../archive/governance-index/">Governance Index</a>
-          <a href="../policy/electricity/">Policy</a>
-          <a href="../constitution/">Constitution</a>
-          <a href="../projects/">Projects</a>
-          <a href="../about/">About</a>
+          <a href="/">Home</a>
+          <a href="/archive/" aria-current="page">Archive</a>
+          <a href="/archive/methodology/">Methodology</a>
+          <a href="/archive/accountability-index/">Accountability Index</a>
+          <a href="/archive/governance-diagnostics/">Governance Diagnostics</a>
+          <a href="/policy/electricity/">Policy</a>
+          <a href="/constitution/">Constitution</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
         </nav>
       </div>
     </header>
-
+    <div class="line" aria-hidden="true"></div>
     <main class="main">
       <section class="hero">
-        <div class="hero-eyebrow">The Archive</div>
+        <p class="hero-eyebrow">The Archive</p>
         <h1>A public record of how power is exercised.</h1>
-        <p class="hero-copy">The Archive is Office of the Citizen’s permanent civic record of public consequence in Nigeria. It documents how power is exercised, identifies responsibility across the accountability chain, preserves evidence trails, and makes institutional conduct available for public understanding, scrutiny, and long-term analysis.</p>
+        <p class="hero-copy">
+          The Archive is Office of the Citizen’s permanent civic record of public consequence in Nigeria’s Fourth Republic. It documents how power is exercised, identifies responsibility across the accountability chain, preserves evidence trails, and makes institutional conduct available for public understanding, scrutiny, and long-term analysis. It is not a scandal vault, not a news site, and not a political tool. It is a structured civic record built for permanence.
+        </p>
+        <p class="meta">Foundational archive layer · Nigeria, 1999 to present · Office of the Citizen</p>
       </section>
 
-      <div class="cta-row" aria-label="Archive sections">
-        <a class="button-primary" href="./methodology/">Methodology</a>
-        <a class="button-secondary" href="./transparency-index/">Transparency Index</a>
-        <a class="button-tertiary" href="./governance-index/">Governance Index</a>
+      <div class="cta-row">
+        <a class="button-primary" href="/archive/methodology/">Methodology</a>
+        <a class="button-secondary" href="/archive/accountability-index/">Accountability Index</a>
+        <a class="button-tertiary" href="/archive/governance-diagnostics/">Governance Diagnostics</a>
       </div>
     </main>
   </div>
+
   <script>
     document.querySelectorAll("[data-menu]").forEach((menu) => {
       const button = menu.querySelector(".menu-button");
@@ -487,14 +330,10 @@
         link.addEventListener("click", () => setOpen(false));
       });
       document.addEventListener("click", (event) => {
-        if (!menu.contains(event.target)) {
-          setOpen(false);
-        }
+        if (!menu.contains(event.target)) setOpen(false);
       });
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          setOpen(false);
-        }
+        if (event.key === "Escape") setOpen(false);
       });
     });
   </script>
