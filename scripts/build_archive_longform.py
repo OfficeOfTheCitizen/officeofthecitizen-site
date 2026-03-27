@@ -93,7 +93,7 @@ def clean_node(el):
     if node is None:
         return None
     for tag in list(node.find_all(True)):
-        if tag.name in {"span", "font"}:
+        if tag.name in {"span", "font", "b", "strong", "i", "em", "u"}:
             tag.unwrap()
             continue
         tag.attrs = {}
@@ -118,8 +118,43 @@ def is_all_boldish(node) -> bool:
 
 
 def render_table(node) -> str:
-    node["class"] = "doc-table"
-    return f'<div class="table-wrap">{str(node)}</div>'
+    table_soup = BeautifulSoup(str(node), "lxml")
+    table = table_soup.find("table")
+    if table is None:
+        return ""
+
+    tbody = table.find("tbody") or table
+    rows = tbody.find_all("tr", recursive=False)
+
+    if len(rows) == 1:
+        cells = rows[0].find_all(["td", "th"], recursive=False)
+        if len(cells) == 2 and not normalize_text(cells[0].get_text(" ", strip=True)):
+            right_html = "".join(str(child) for child in cells[1].contents).strip()
+            return f'<div class="callout">{right_html}</div>'
+
+    if rows:
+        first_cells = rows[0].find_all(["td", "th"], recursive=False)
+        first_texts = [normalize_text(cell.get_text(" ", strip=True)) for cell in first_cells]
+        headerish = (
+            len(rows) > 1
+            and first_cells
+            and all(first_texts)
+            and all(len(text) <= 120 for text in first_texts)
+            and (
+                all(not text.endswith(".") for text in first_texts)
+                or all(len(text.split()) <= 6 for text in first_texts)
+            )
+        )
+        if headerish:
+            thead = table_soup.new_tag("thead")
+            head_row = rows[0].extract()
+            thead.append(head_row)
+            for cell in thead.find_all(["td", "th"]):
+                cell.name = "th"
+            table.insert(0, thead)
+
+    table["class"] = "doc-table"
+    return f'<div class="table-wrap">{str(table)}</div>'
 
 
 def render_list(node) -> str:
@@ -298,7 +333,8 @@ def parse_document(config: dict) -> dict:
 
     meta_parts = [normalize_text(part) for part in re.split(r"\s*·\s*", meta_line) if normalize_text(part)]
     meta_items = []
-    labels = ["Version", "Year", "Office", "Scope"]
+    final_label = "Jurisdiction" if len(meta_parts) >= 4 and "Nigeria" in meta_parts[3] else "Partner"
+    labels = ["Version", "Year", "Office", final_label]
     for idx, part in enumerate(meta_parts[:4]):
         label = labels[idx] if idx < len(labels) else f"Field {idx + 1}"
         meta_items.append((label, part))

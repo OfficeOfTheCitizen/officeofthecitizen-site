@@ -559,6 +559,10 @@ img { max-width: 100%; display: block; }
   text-justify: inter-word;
 }
 
+.callout p + p {
+  margin-top: 8px;
+}
+
 .footer {
   margin-top: 34px;
   padding-top: 18px;
