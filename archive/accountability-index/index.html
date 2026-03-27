@@ -6,7 +6,7 @@
   <title>Accountability Index | Office of the Citizen</title>
   <meta
     name="description"
-    content="Instrument specification and scoring manual for the Archive Accountability Index."
+    content="Full instrument specification and scoring manual for the Accountability Index."
   >
   <link rel="stylesheet" href="/archive/assets/archive-doc.css">
 </head>
@@ -43,218 +43,1610 @@
             <div class="toc-group">
               <div class="toc-group-label">Document Sections</div>
               <ul class="toc-list toc-main">
-                <li><a href="#section-1-overview"><span>Overview</span></a></li>
-                <li><a href="#section-2-document-map"><span>Document Map</span></a></li>
-                <li><a href="#section-3-what-it-measures"><span>What It Measures</span></a></li>
-                <li><a href="#section-4-structure-and-formula"><span>Structure and Formula</span></a></li>
-                <li><a href="#section-5-impact-score"><span>Impact Score</span></a></li>
-                <li><a href="#section-6-accountability-score"><span>Accountability Score</span></a></li>
-                <li><a href="#section-7-decay-and-rules"><span>Decay and Rules</span></a></li>
-                <li><a href="#section-8-workflow-and-reporting"><span>Workflow and Reporting</span></a></li>
+                <li><a href="#chapter-1-purpose-what-the-index-measures-and-why"><span>Chapter 1 — Purpose — What the Index Measures and Why</span></a></li>
+                <li><a href="#chapter-2-the-three-instrument-framework"><span>Chapter 2 — The Three-Instrument Framework</span></a></li>
+                <li><a href="#chapter-3-the-two-part-structure-impact-and-accountability"><span>Chapter 3 — The Two-Part Structure — Impact and Accountability</span></a></li>
+                <li><a href="#chapter-4-the-impact-score-five-dimensions"><span>Chapter 4 — The Impact Score — Five Dimensions</span></a></li>
+                <li><a href="#chapter-5-the-accountability-score-five-dimensions"><span>Chapter 5 — The Accountability Score — Five Dimensions</span></a></li>
+                <li><a href="#chapter-6-the-accountability-deficit-formula"><span>Chapter 6 — The Accountability Deficit Formula</span></a></li>
+                <li><a href="#chapter-7-decay-weighting-how-unfinished-accountability-erodes-over-time"><span>Chapter 7 — Decay Weighting — How Unfinished Accountability Erodes Over Time</span></a></li>
+                <li><a href="#chapter-8-formal-and-political-accountability-keeping-them-distinct"><span>Chapter 8 — Formal and Political Accountability — Keeping Them Distinct</span></a></li>
+                <li><a href="#chapter-9-scoring-rules-and-evidence-anchors"><span>Chapter 9 — Scoring Rules and Evidence Anchors</span></a></li>
+                <li><a href="#chapter-10-the-visual-accountability-profile"><span>Chapter 10 — The Visual Accountability Profile</span></a></li>
+                <li><a href="#chapter-11-scoring-workflow-how-a-case-receives-its-index-score"><span>Chapter 11 — Scoring Workflow — How a Case Receives Its Index Score</span></a></li>
+                <li><a href="#chapter-12-updating-index-scores-as-cases-evolve"><span>Chapter 12 — Updating Index Scores as Cases Evolve</span></a></li>
+                <li><a href="#chapter-13-system-level-aggregation-from-case-scores-to-institutional-profiles"><span>Chapter 13 — System-Level Aggregation — From Case Scores to Institutional Profiles</span></a></li>
+                <li><a href="#chapter-14-the-nigeria-accountability-index-report"><span>Chapter 14 — The Nigeria Accountability Index Report</span></a></li>
+                <li><a href="#chapter-15-bias-controls-specific-to-the-index"><span>Chapter 15 — Bias Controls Specific to the Index</span></a></li>
+                <li><a href="#chapter-16-what-cannot-be-changed-without-full-editorial-board-vote"><span>Chapter 16 — What Cannot Be Changed Without Full Editorial Board Vote</span></a></li>
               </ul>
             </div>
           </div>
         </aside>
 
         <main class="main">
-          <header class="hero" id="section-1-overview">
+          <header class="hero" id="hero-overview">
             <div class="kicker">Accountability Index</div>
             <h1 class="title">
-              <span class="title-main">Instrument Specification</span>
-              <span>and Scoring Manual</span>
+              <span class="title-main">THE 100 ARCHIVE PROJECT</span>
             </h1>
             <div class="hero-subdeck">
-              <p class="subtitle">The 100 Archive Project · Evidence-based scoring for accountability failure</p>
+              <p class="subtitle">Accountability Index · Instrument Specification and Scoring Manual</p>
             </div>
             <div class="meta" aria-label="Document metadata">
-              <dl><dt>Version</dt><dd>1.1</dd></dl>
+              <dl><dt>Version</dt><dd>Version 1.1</dd></dl>
               <dl><dt>Year</dt><dd>2026</dd></dl>
               <dl><dt>Office</dt><dd>Office of the Citizen</dd></dl>
-              <dl><dt>Partner</dt><dd>Polymath Pictures</dd></dl>
+              <dl><dt>Scope</dt><dd>Polymath Pictures</dd></dl>
             </div>
             <div class="download-bar">
-              <a class="button secondary" href="#section-3-what-it-measures">Begin Reading</a>
+              <a class="button secondary" href="#chapter-1-purpose-what-the-index-measures-and-why">Begin Reading</a>
             </div>
-            <p class="doc-p" style="margin-top:20px;">
-              The Accountability Index exists to answer a diagnostic question Nigerian governance analysis has rarely answered with method: when something went wrong, how did the system respond? It measures the gap between event severity and accountability response, case by case, institution by institution, sector by sector, and year by year.
-            </p>
+            <p class="doc-p" style="margin-top:20px;">This document defines exactly how every score in the Accountability Index is calculated, verified, applied, and updated. All scoring is evidence-based. No score may be assigned without a documented primary source. This specification is publicly available so that scoring can be independently audited.</p>
           </header>
 
-          <section class="section" id="section-2-document-map">
-            <div class="note">Document Map</div>
-            <h2 class="doc-h2">The scoring manual’s chapter architecture</h2>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Accountability Index chapter map">
-                <thead>
-                  <tr><th>Chapter</th><th>Coverage</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>1</td><td>Purpose — What the Index Measures and Why</td></tr>
-                  <tr><td>2</td><td>The Three-Instrument Framework</td></tr>
-                  <tr><td>3</td><td>The Two-Part Structure — Impact and Accountability</td></tr>
-                  <tr><td>4</td><td>The Impact Score — Five Dimensions</td></tr>
-                  <tr><td>5</td><td>The Accountability Score — Five Dimensions</td></tr>
-                  <tr><td>6</td><td>The Accountability Deficit Formula</td></tr>
-                  <tr><td>7</td><td>Decay Weighting</td></tr>
-                  <tr><td>8</td><td>Formal and Political Accountability</td></tr>
-                  <tr><td>9</td><td>Scoring Rules and Evidence Anchors</td></tr>
-                  <tr><td>10</td><td>The Visual Accountability Profile</td></tr>
-                  <tr><td>11</td><td>Scoring Workflow</td></tr>
-                  <tr><td>12</td><td>Updating Index Scores as Cases Evolve</td></tr>
-                  <tr><td>13</td><td>System-Level Aggregation</td></tr>
-                  <tr><td>14</td><td>The Nigeria Accountability Index Report</td></tr>
-                  <tr><td>15</td><td>Bias Controls Specific to the Index</td></tr>
-                  <tr><td>16</td><td>What Cannot Be Changed Without Full Editorial Board Vote</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <section class="section" id="chapter-1-purpose-what-the-index-measures-and-why">
+            <div class="note">Chapter 1</div>
+            <h2 class="doc-h2">Purpose — What the Index Measures and Why</h2>
+            <p class="section-subtitle">The governance question Nigerian analysis has never systematically answered</p>
+            <h3 class="doc-h3" id="1-1-1-the-question"><b>1.1  </b><b>The Question</b><b></b></h3>
+<p class="doc-p"><b>Nigerian governance analysis is rich in documentation of what went wrong. It is almost entirely silent on a second question that is more diagnostic: when something went wrong, how did the system respond?</b><b></b></p>
+<p class="doc-p"><b>A country with many serious failures and strong accountability responses is a democracy under stress — institutions are being tested and they are working. A country with moderate failures and near-zero accountability responses is a democracy in structural decline — the failures are not the primary problem; the system's inability to hold itself accountable is. These two countries look identical if you measure only events. They look very different if you measure the gap between the severity of events and the quality of the response.</b><b></b></p>
+<p class="doc-p"><b>That gap is the Accountability Deficit. The Index exists to measure it, case by case, institution by institution, sector by sector, year by year.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>PRINCIPLE</b><b></b></p>
+<p>The Index does not measure corruption. It measures accountability failure — the systematic gap between how serious a governance failure was and how seriously the system treated it. These are related but distinct. Corruption is one cause of governance failure. Weak accountability is what allows it to persist.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="doc-h3" id="1-1-2-why-this-has-not-been-done-before"><b>1.2  </b><b>Why This Has Not Been Done Before</b><b></b></h3>
+<p class="doc-p"><b>Existing governance indices — Transparency International's Corruption Perceptions Index, the Ibrahim Index of African Governance, the World Bank's Governance Indicators — share a structural limitation: they measure perceptions or aggregate statistics, not documented incidents with evidence trails. They tell you something is bad. They cannot tell you exactly where the accountability system broke down, or which institutions within the same country perform better or worse.</b><b></b></p>
+<p class="doc-p"><b>The Archive's Index is different in two ways. First, every score is anchored to a specific documented case with a primary source evidence trail — not to a survey of expert perceptions. Second, the Index measures the response to each event separately from the severity of the event, producing a diagnostic decomposition that perception-based indices cannot generate.</b><b></b></p>
+<p class="doc-p"><b>This is the methodological contribution the governance field has needed: an incident-based, evidence-grounded, publicly auditable accountability index. It will take longer to build than a perception index. It will be harder to produce. It will be more credible and more useful.</b><b></b></p>
+<h3 class="doc-h3" id="1-1-3-what-the-index-is-not"><b>1.3  </b><b>What the Index Is Not</b><b></b></h3>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>A corruption measure — corruption is one cause of accountability failure, not its synonym</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A ranking of Nigerian states or institutions by goodness or badness — it is a diagnostic tool, not a league table</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A tool for political attack — entries that produce high accountability deficits must pass the same four-stage editorial review as all Archive entries</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A real-time monitoring system — scores are assigned at publication and updated as cases evolve; they reflect documented evidence, not live tracking</i></b><b><i></i></b></li>
+</ul>
           </section>
-
-          <section class="section" id="section-3-what-it-measures">
-            <div class="note">Chapters 1–2</div>
-            <h2 class="doc-h2">What the Index measures</h2>
-            <p class="doc-p">
-              The Index does not measure corruption. It measures accountability failure: the systematic gap between how serious a governance failure was and how seriously the system treated it. That makes it fundamentally different from perception-based governance indices and from general rankings of states or institutions by “goodness” or “badness.”
-            </p>
-            <p class="doc-p">
-              The specification distinguishes three instruments used by the Archive. The Case Qualification Threshold asks whether something belongs in the Archive at all. The Case Importance Score asks how important a case is relative to others. The Accountability Index asks what the documented case reveals about the system’s accountability performance.
-            </p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Three instrument framework">
-                <thead>
-                  <tr><th>Instrument</th><th>Applied when</th><th>Question answered</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Case Qualification Threshold</td><td>At intake, before research begins</td><td>Should this be an Archive case at all?</td></tr>
-                  <tr><td>Case Importance Score (CIS)</td><td>At intake, after threshold passes</td><td>How important is this case relative to others?</td></tr>
-                  <tr><td>Accountability Index</td><td>At publication and updated as cases evolve</td><td>What does this case reveal about the system’s accountability performance?</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <section class="section" id="chapter-2-the-three-instrument-framework">
+            <div class="note">Chapter 2</div>
+            <h2 class="doc-h2">The Three-Instrument Framework</h2>
+            <p class="section-subtitle">How the Index relates to the CIS and the Case Qualification Threshold</p>
+            <h3 class="doc-h3" id="2-2-1-three-instruments-three-jobs"><b>2.1  </b><b>Three Instruments, Three Jobs</b><b></b></h3>
+<p class="doc-p"><b>The Archive uses three scoring instruments. Each operates at a different moment in the case lifecycle and answers a different question. None replaces the others.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Instrument</b><b></b></p>
+</td>
+<td>
+<p><b>Applied When</b><b></b></p>
+</td>
+<td>
+<p><b>Answers</b><b></b></p>
+</td>
+<td>
+<p><b>Used For</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Case Qualification Threshold</p>
+</td>
+<td>
+<p>At intake — before research begins</p>
+</td>
+<td>
+<p>Should this be an Archive case at all?</p>
+</td>
+<td>
+<p>Binary gate: accept or reject</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Case Importance Score (CIS)</p>
+</td>
+<td>
+<p>At intake — after threshold passed</p>
+</td>
+<td>
+<p>How important is this case relative to others?</p>
+</td>
+<td>
+<p>Publication priority; slot allocation; Annual Report weighting</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Accountability Index</p>
+</td>
+<td>
+<p>At publication; updated as cases evolve</p>
+</td>
+<td>
+<p>What does this case reveal about the system's accountability performance?</p>
+</td>
+<td>
+<p>Institutional profiling; sector analysis; geographic analysis; Annual Index Report</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="doc-p"><b>The CIS and the Accountability Index are sometimes confused because both are numerical scores applied to Archive cases. The difference is fundamental: the CIS measures the civic importance of the event at the moment it enters the Archive. The Accountability Index measures the system's accountability performance in response to that event, which takes shape over months and years as investigations are opened, findings released, prosecutions commenced or abandoned, and reforms enacted or shelved.</b><b></b></p>
+<h3 class="doc-h3" id="2-2-2-why-the-index-is-applied-at-publication-not-at-intake"><b>2.2  </b><b>Why the Index Is Applied at Publication, Not at Intake</b><b></b></h3>
+<p class="doc-p"><b>A case that enters the Archive in January may have a complete Impact Score at intake — the harm occurred, its scale is documentable. But the Accountability Score cannot be complete at intake because accountability responses take time. The investigation has not yet been opened. The EFCC has not yet acted. The National Assembly committee has not yet reported.</b><b></b></p>
+<p class="doc-p"><b>Applying the Accountability Score at intake would produce systematically distorted data: recent cases would always show high accountability deficits simply because not enough time has elapsed for accountability responses to occur. Historical cases would show lower deficits because some accountability responses have already occurred, even if inadequate. Applying the Index at publication — after the right-of-reply process and after the case has been fully researched — and then updating it as cases evolve, removes this temporal distortion.</b><b></b></p>
           </section>
-
-          <section class="section" id="section-4-structure-and-formula">
-            <div class="note">Chapters 3 &amp; 6</div>
-            <h2 class="doc-h2">Structure and formula</h2>
-            <p class="doc-p">
-              Every case produces two scores reported separately and then combined. The Impact Score measures how serious the event was. The Accountability Score measures how well the system responded. Their difference is the Accountability Deficit. The separate reporting matters because events with the same deficit can imply very different institutional diagnoses.
-            </p>
-            <p class="doc-runin"><span class="doc-label">Formula</span><span>Accountability Deficit = Impact Score − Accountability Score. Reporting range: −25 to +25, with very large surpluses capped in aggregate reporting so outliers do not distort system-level analysis.</span></p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Deficit classification">
-                <thead>
-                  <tr><th>Range</th><th>Classification</th><th>Interpretation</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>20 to 25</td><td>Critical Deficit</td><td>The system almost entirely failed to respond to a very serious event.</td></tr>
-                  <tr><td>15 to 19</td><td>Severe Deficit</td><td>Very serious event with minimal accountability response.</td></tr>
-                  <tr><td>10 to 14</td><td>High Deficit</td><td>Significant event with weak accountability response.</td></tr>
-                  <tr><td>5 to 9</td><td>Moderate Deficit</td><td>Some institutional action occurred, but incompletely.</td></tr>
-                  <tr><td>0</td><td>Balanced</td><td>Impact and accountability response are in approximate balance.</td></tr>
-                  <tr><td>Below 0</td><td>Accountability Surplus</td><td>The system responded more rigorously than the event strictly required.</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <section class="section" id="chapter-3-the-two-part-structure-impact-and-accountability">
+            <div class="note">Chapter 3</div>
+            <h2 class="doc-h2">The Two-Part Structure — Impact and Accountability</h2>
+            <h3 class="doc-h3" id="3-3-1-the-fundamental-distinction"><b>3.1  </b><b>The Fundamental Distinction</b><b></b></h3>
+<p class="doc-p"><b>Every case produces two scores that are calculated separately, reported separately, and then combined to produce the Accountability Deficit.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>IMPACT SCORE</b><b></b></p>
+<p>How serious was the event?</p>
+<p>5 dimensions  ·  Max score: 25</p>
+</td>
+<td>
+<p>−</p>
+</td>
+<td>
+<p><b>ACCOUNTABILITY SCORE</b><b></b></p>
+<p>How well did the system respond?</p>
+<p>5 dimensions  ·  Max score: 25</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="doc-p">= ACCOUNTABILITY DEFICIT  (Impact Score − Accountability Score)</p>
+<h3 class="doc-h3" id="3-3-2-why-separate-reporting-matters"><b>3.2  </b><b>Why Separate Reporting Matters</b><b></b></h3>
+<p class="doc-p"><b>The deficit score tells you that accountability failed. The separate scores tell you why. An Impact Score of 22 with an Accountability Score of 2 tells a different story from an Impact Score of 10 with an Accountability Score of 0 — even if both produce a deficit of 20. The first is a catastrophic event with minimal response. The second is a moderate event the system entirely ignored. These require different policy responses and tell different stories about institutional behaviour.</b><b></b></p>
+<p class="doc-p"><b>The separate scores also enable the most important analysis the Index can produce: within the Accountability Score, which dimension consistently fails? If ten cases in the Procurement sector all score well on Investigation and zero on Consequences, the diagnosis is precise — procurement failures are investigated, and then nothing happens. That is not a problem of investigation capacity. It is a problem of political will to prosecute. Separate dimension reporting makes that visible. A single aggregate score cannot.</b><b></b></p>
           </section>
-
-          <section class="section" id="section-5-impact-score">
+          <section class="section" id="chapter-4-the-impact-score-five-dimensions">
             <div class="note">Chapter 4</div>
-            <h2 class="doc-h2">The Impact Score</h2>
-            <p class="doc-p">
-              The Impact Score has five dimensions, each scored 0–5, for a maximum of 25. Each dimension must be anchored to a specific primary source. The score is assigned by the Research Director and confirmed by the Editorial Lead at publication.
-            </p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Impact dimensions">
-                <thead>
-                  <tr><th>Dimension</th><th>What it measures</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Human Impact</td><td>Direct physical, health, or livelihood harm to people caused by the documented failure</td></tr>
-                  <tr><td>Financial Impact</td><td>Documented loss of public funds, economic damage to public resources, or value of public goods denied</td></tr>
-                  <tr><td>Institutional Impact</td><td>Damage to the functional capacity or structural integrity of public institutions</td></tr>
-                  <tr><td>Democratic Impact</td><td>Damage to democratic norms, processes, and rights</td></tr>
-                  <tr><td>Public Trust Impact</td><td>Damage to citizen confidence in trust-critical institutions, assessed by institutional role and nature of the violation rather than polling</td></tr>
-                </tbody>
-              </table>
-            </div>
+            <h2 class="doc-h2">The Impact Score — Five Dimensions</h2>
+            <p class="section-subtitle">Measuring how serious the event was</p>
+            <h3 class="doc-h3" id="4-4-1-overview"><b>4.1  </b><b>Overview</b><b></b></h3>
+<p class="doc-p"><b>The Impact Score has five dimensions, each scored 0–5. Maximum possible Impact Score: 25. The score is assigned by the Research Director at the time of publication and confirmed by the Editorial Lead. All scores must be anchored to a specific primary source cited in the Research File.</b><b></b></p>
+<h4 class="doc-h4"><b>Dimension 1 — Human Impact  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures the direct physical, health, or livelihood harm to people caused by the documented failure.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor — What Primary Source Evidence Is Required</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No documented harm</b><b></b></p>
+</td>
+<td>
+<p><b>No harm</b><b></b></p>
+<p>No documented physical, health, or livelihood impact found in primary sources</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Limited harm</b><b></b></p>
+</td>
+<td>
+<p><b>1–2</b><b></b></p>
+<p>Documented harm to fewer than 10 individuals or minor disruption to community services</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Moderate harm</b><b></b></p>
+</td>
+<td>
+<p><b>3–4</b><b></b></p>
+<p>Documented harm to a defined community, or significant disruption to essential services for a limited population; fewer than 10,000 people directly affected</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Significant harm</b><b></b></p>
+</td>
+<td>
+<p><b>—</b><b></b></p>
+<p>Documented harm to tens of thousands of people, or sustained denial of essential services (healthcare, education, water, power) to a defined population for a documented period</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Severe harm</b><b></b></p>
+</td>
+<td>
+<p><b>—</b><b></b></p>
+<p>Documented deaths (1–10) attributable to the governance failure, or documented mass displacement or systematic rights violations affecting a large population</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Critical harm</b><b></b></p>
+</td>
+<td>
+<p><b>—</b><b></b></p>
+<p>Documented deaths of more than 10 people attributable to the failure, or mass casualty event, or systematic harm affecting hundreds of thousands</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension 2 — Financial Impact  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures the documented loss of public funds, economic damage to public resources, or value of public goods denied.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No documented financial impact</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>No documented public financial loss</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Under NGN 100 million</b><b></b></p>
+</td>
+<td>
+<p><b>Documented in audit or contract record</b><b></b></p>
+<p>Public funds lost or misapplied below NGN 100 million, evidenced by primary source</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>NGN 100m – NGN 1 billion</b><b></b></p>
+</td>
+<td>
+<p><b>Documented in audit or contract record</b><b></b></p>
+<p>Public financial impact in this range</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>NGN 1 billion – NGN 10 billion</b><b></b></p>
+</td>
+<td>
+<p><b>Auditor-General or EFCC finding</b><b></b></p>
+<p>Public financial impact in this range; must be sourced to primary financial document</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>NGN 10 billion – NGN 100 billion</b><b></b></p>
+</td>
+<td>
+<p><b>Auditor-General, NEITI, or court judgment</b><b></b></p>
+<p>Public financial impact in this range</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Above NGN 100 billion</b><b></b></p>
+</td>
+<td>
+<p><b>Primary financial document required</b><b></b></p>
+<p>Documented public financial impact above NGN 100 billion; NNPC, sovereign fund, or equivalent scale</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>IMPORTANT</b><b></b></p>
+<p>Financial Impact scores must be anchored to a specific primary source stating the financial figure: an Auditor-General report, a court judgment, a NEITI disclosure, a contract award value. A journalist's estimate of financial loss, however credible, is not sufficient. If no primary source states the financial figure, the score is 0 on this dimension and the Best Missing Document field in the Research File must record what primary source would establish it.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension 3 — Institutional Impact  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures how deeply the event damages the functional capacity or structural integrity of public institutions — independent of its human or financial cost.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No documented institutional damage</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>The failure was operational; no evidence it damaged institutional capacity or structure</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>LGA or local institutional disruption</b><b></b></p>
+</td>
+<td>
+<p><b>Documented local effect</b><b></b></p>
+<p>Documented damage limited to a single local government institution or local service delivery system</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>State institutional failure</b><b></b></p>
+</td>
+<td>
+<p><b>State audit or court record</b><b></b></p>
+<p>Documented failure affecting a state-level institution's capacity; state agency rendered non-functional for a period</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>National institutional failure</b><b></b></p>
+</td>
+<td>
+<p><b>Federal audit, National Assembly record</b><b></b></p>
+<p>A federal institution's capacity is documented as significantly impaired for a sustained period</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Multi-institutional failure</b><b></b></p>
+</td>
+<td>
+<p><b>Primary sources across multiple institutions</b><b></b></p>
+<p>Two or more federal institutions simultaneously impaired; documented cascade of institutional failures</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Constitutional or systemic breakdown</b><b></b></p>
+</td>
+<td>
+<p><b>Court judgment or constitutional record</b><b></b></p>
+<p>The failure reaches constitutional level — electoral system integrity, judicial independence, or separation of powers demonstrably compromised by primary source evidence</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension 4 — Democratic Impact  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures the damage the event causes to democratic norms, processes, and rights — the accountability mechanisms that citizens use to exercise oversight over government.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No democratic dimension</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>The failure does not impair any democratic right, process, or oversight mechanism</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Minor impairment</b><b></b></p>
+</td>
+<td>
+<p><b>Documented in official record</b><b></b></p>
+<p>A democratic right or process is affected at local level or in a limited and reversible way</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Significant impairment of a specific right</b><b></b></p>
+</td>
+<td>
+<p><b>Primary source — court record, INEC document</b><b></b></p>
+<p>A documented civil right, electoral right, or press freedom violation affecting an identified group</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Systemic impairment of a democratic process</b><b></b></p>
+</td>
+<td>
+<p><b>Court judgment or National Assembly record</b><b></b></p>
+<p>A democratic process — electoral administration, judicial review, legislative oversight — is documented as systematically impaired</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Undermines a key democratic institution</b><b></b></p>
+</td>
+<td>
+<p><b>Primary constitutional or legal source</b><b></b></p>
+<p>Judicial independence, electoral integrity, or legislative authority is demonstrably damaged</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Fundamental democratic failure</b><b></b></p>
+</td>
+<td>
+<p><b>Supreme Court judgment or constitutional record</b><b></b></p>
+<p>A core democratic right is denied at scale, or an institution's democratic mandate is demonstrably nullified</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension 5 — Public Trust Impact  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures the event's damage to citizen confidence in state institutions, assessed by the nature of the institution involved and the type of violation. This dimension is unique: trust damage is often disproportionate to financial or human impact. A judicial corruption finding of modest scale may do more trust damage than a large procurement failure because it strikes at the institution citizens depend on to hold other institutions accountable.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No significant trust dimension</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>The failure does not involve an institution whose integrity is foundational to public trust</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Minor trust effect</b><b></b></p>
+</td>
+<td>
+<p><b>Documented in credible secondary source</b><b></b></p>
+<p>A service delivery failure that disappoints but does not fundamentally shake institutional confidence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Moderate trust damage</b><b></b></p>
+</td>
+<td>
+<p><b>Documented institutional conduct record</b><b></b></p>
+<p>Misconduct by a public official in a trust-sensitive role: a health regulator approving dangerous drugs, a licensing authority taking bribes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Significant trust damage</b><b></b></p>
+</td>
+<td>
+<p><b>Primary source — official conduct record or court record</b><b></b></p>
+<p>Misconduct by a senior official of a trust-critical institution; documented cover-up or institutional denial of documented facts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Severe trust damage</b><b></b></p>
+</td>
+<td>
+<p><b>Court record or major institutional finding</b><b></b></p>
+<p>Judicial misconduct, electoral manipulation, or systematic police brutality evidenced to court or official inquiry standard</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Critical trust damage</b><b></b></p>
+</td>
+<td>
+<p><b>Court judgment or equivalent primary source</b><b></b></p>
+<p>Misconduct at the apex of a trust-critical institution: Supreme Court, office of the President, INEC at national level, Central Bank</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>PRINCIPLE</b><b></b></p>
+<p>Public Trust Impact is scored on the institution's role and the nature of the violation, not on measured public sentiment. The Archive does not conduct polling. Trust damage is assessed by asking: would a reasonable citizen, upon reading the primary source evidence of what occurred, lose confidence in this institution's ability to perform its constitutional function? The answer determines the score.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
           </section>
-
-          <section class="section" id="section-6-accountability-score">
+          <section class="section" id="chapter-5-the-accountability-score-five-dimensions">
             <div class="note">Chapter 5</div>
-            <h2 class="doc-h2">The Accountability Score</h2>
-            <p class="doc-p">
-              The Accountability Score also has five dimensions, each scored 0–5, for a maximum of 25. It is the only score routinely updated as cases evolve, because accountability responses unfold over time. The absence of action is itself a documentable finding, not an editorial flourish.
-            </p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Accountability dimensions">
-                <thead>
-                  <tr><th>Dimension</th><th>What it measures</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>A1 — Investigation</td><td>Whether and how seriously the relevant institution investigated the documented failure</td></tr>
-                  <tr><td>A2 — Transparency</td><td>Whether findings, evidence, and accountability processes were made public</td></tr>
-                  <tr><td>A3 — Consequences</td><td>Whether named responsible parties faced formal institutional consequences proportionate to the severity of the failure</td></tr>
-                  <tr><td>A4 — Institutional Reform</td><td>Whether the failure led to documented policy, legal, procedural, or structural changes that reduce recurrence</td></tr>
-                  <tr><td>A5 — Time to Response</td><td>The weighted timeliness of investigation, findings, consequences, and reform stages</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="doc-p">
-              Formal accountability and political accountability are kept distinct. Officials losing elections, resigning under public pressure, or facing party discipline are documented on the case page, but they do not increase the Accountability Score unless formal proceedings also occurred.
-            </p>
+            <h2 class="doc-h2">The Accountability Score — Five Dimensions</h2>
+            <p class="section-subtitle">Measuring how well the system responded</p>
+            <h3 class="doc-h3" id="5-5-1-overview"><b>5.1  </b><b>Overview</b><b></b></h3>
+<p class="doc-p"><b>The Accountability Score has five dimensions, each scored 0–5. Maximum possible Accountability Score: 25. The score is assigned at publication. It is the only score in the Index that is routinely updated as cases evolve — because accountability responses unfold over time. All scores must be anchored to primary source evidence of documented institutional action or inaction.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>PRINCIPLE</b><b></b></p>
+<p>The absence of action is itself a documentable fact. A score of 0 on any Accountability dimension is not an editorial judgment that the system failed — it is a documented finding that no primary source evidence of the relevant institutional action exists. The distinction matters legally and credibly.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension A1 — Investigation  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures whether and how seriously the relevant institution investigated the documented failure.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No investigation</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>No primary source evidence that any official investigation was opened</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Investigation announced</b><b></b></p>
+</td>
+<td>
+<p><b>Official press release or government statement</b><b></b></p>
+<p>A formal investigation was announced by an official with authority to open one; no further progress documented</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Investigation commenced</b><b></b></p>
+</td>
+<td>
+<p><b>Official appointment of investigative body or committee</b><b></b></p>
+<p>An investigative body was formally constituted with named members and a documented mandate</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Investigation active with interim findings</b><b></b></p>
+</td>
+<td>
+<p><b>Published interim report or documented evidence gathering</b><b></b></p>
+<p>The investigation is documented as active; interim findings or documented evidence-gathering on record</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Investigation concluded with published findings</b><b></b></p>
+</td>
+<td>
+<p><b>Published final report</b><b></b></p>
+<p>A formal investigation report was published; findings are on record; recommendations stated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Independent investigation with published findings</b><b></b></p>
+</td>
+<td>
+<p><b>Published report from body independent of investigated institution</b><b></b></p>
+<p>An investigation by a body independent of the institution under scrutiny concluded with public findings</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension A2 — Transparency  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures whether findings, evidence, and accountability processes were made available to the public.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>Fully opaque</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>No documents, findings, or information about the accountability process were made public</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Minimal disclosure</b><b></b></p>
+</td>
+<td>
+<p><b>Press release only</b><b></b></p>
+<p>Only a government press release or brief statement was made public; no underlying evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Partial disclosure</b><b></b></p>
+</td>
+<td>
+<p><b>Published summary or official statement</b><b></b></p>
+<p>A summary of findings was published, but the underlying evidence or full report was not released</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Substantial disclosure</b><b></b></p>
+</td>
+<td>
+<p><b>Published report with methodology</b><b></b></p>
+<p>A substantial report was published including methodology, evidence basis, and findings; some documents withheld</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Full disclosure</b><b></b></p>
+</td>
+<td>
+<p><b>Published full report and supporting documents</b><b></b></p>
+<p>The full report and its supporting documents were published and are publicly accessible</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Proactive full disclosure</b><b></b></p>
+</td>
+<td>
+<p><b>Published full report, documents, and implementation tracking</b><b></b></p>
+<p>Full report, documents, and ongoing implementation tracking all publicly available; institution proactively discloses</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension A3 — Consequences  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures whether identified responsible parties faced documented consequences proportionate to the severity of the failure.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No consequences</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>No primary source evidence of any action against any responsible party</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Informal action</b><b></b></p>
+</td>
+<td>
+<p><b>Official communication or media report citing named official</b><b></b></p>
+<p>Named responsible party redeployed, transferred, or removed from post without formal proceedings</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Formal administrative action</b><b></b></p>
+</td>
+<td>
+<p><b>Official disciplinary record</b><b></b></p>
+<p>Named responsible party subjected to documented formal disciplinary process — query, sanction, or formal reprimand</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Suspension or dismissal</b><b></b></p>
+</td>
+<td>
+<p><b>Official personnel action record</b><b></b></p>
+<p>Named responsible party formally suspended or dismissed from public office following documented process</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Prosecution commenced</b><b></b></p>
+</td>
+<td>
+<p><b>Court record — charge sheet or arraignment</b><b></b></p>
+<p>Named responsible party charged before a court of competent jurisdiction; proceedings commenced</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Conviction and sentence</b><b></b></p>
+</td>
+<td>
+<p><b>Court judgment</b><b></b></p>
+<p>Named responsible party convicted by a court and sentenced; judgment on public record</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>IMPORTANT</b><b></b></p>
+<p>The Consequences dimension measures formal institutional accountability only — what public bodies and courts did. Political accountability (officials voted out of office, parties losing elections as a consequence of the documented failure) is measured separately under Chapter 8. Do not conflate them. An official who loses an election as a consequence of a documented failure scores 0 on Consequences unless formal proceedings also occurred.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension A4 — Institutional Reform  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures whether the documented failure led to documented changes in policy, law, institutional practice, or structural design that reduce the likelihood of recurrence.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Score</b><b></b></p>
+</td>
+<td>
+<p><b>Evidence Anchor</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>0</b><b></b></p>
+</td>
+<td>
+<p><b>No reform</b><b></b></p>
+</td>
+<td>
+<p><b>None</b><b></b></p>
+<p>No primary source evidence of any policy, legal, or institutional change in response to the failure</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>1</b><b></b></p>
+</td>
+<td>
+<p><b>Stated commitment to reform</b><b></b></p>
+</td>
+<td>
+<p><b>Official statement or policy document</b><b></b></p>
+<p>A public official or institution has stated an intention to reform; no documented implementation</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>2</b><b></b></p>
+</td>
+<td>
+<p><b>Minor procedural reform</b><b></b></p>
+</td>
+<td>
+<p><b>Official circular or administrative directive</b><b></b></p>
+<p>A documented change to internal procedures or administrative guidelines, short of statutory change</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>3</b><b></b></p>
+</td>
+<td>
+<p><b>Significant policy reform</b><b></b></p>
+</td>
+<td>
+<p><b>Published policy document or regulatory change</b><b></b></p>
+<p>A documented change to agency policy, regulatory framework, or procurement guidelines with implementation evidence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>4</b><b></b></p>
+</td>
+<td>
+<p><b>Statutory reform</b><b></b></p>
+</td>
+<td>
+<p><b>Act of the National Assembly or State Assembly — official gazette</b><b></b></p>
+<p>Legislation was enacted or amended in documented response to the failure; Federal or State Gazette reference required</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><b>5</b><b></b></p>
+</td>
+<td>
+<p><b>Structural institutional reform</b><b></b></p>
+</td>
+<td>
+<p><b>Statutory instrument and evidence of implementation</b><b></b></p>
+<p>New oversight body created and staffed; fundamental restructuring of an institution's mandate or accountability architecture, with statutory basis and documented implementation</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>PRINCIPLE</b><b></b></p>
+<p>Reform scores require two things: evidence that the reform was enacted, and evidence that it was implemented. A statute passed but never commenced does not score 4. An agency created but never funded or staffed does not score 5. The reform must exist in practice as well as on paper. If implementation evidence is not yet available, the score is held at one point below full value and updated when implementation is documented.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>Dimension A5 — Time to Response  (0–5)</b><b></b></h4>
+<p class="doc-p"><b>Measures the timeliness of accountability responses across all stages of the process. Unlike the other four dimensions, this dimension is not a single score — it is an average of the timeliness at each stage where an accountability response occurred.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Stage</b><b></b></p>
+</td>
+<td>
+<p><b>Weight</b><b></b></p>
+</td>
+<td>
+<p><b>Scoring Rule</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Investigation opened after failure becomes publicly documented</p>
+</td>
+<td>
+<p>1x</p>
+</td>
+<td>
+<p>Within 3 months: 5 points. Within 1 year: 3 points. Within 3 years: 1 point. After 3 years or never: 0 points</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Findings published after investigation concluded</p>
+</td>
+<td>
+<p>1x</p>
+</td>
+<td>
+<p>Within 3 months of conclusion: 5. Within 6 months: 3. Within 1 year: 1. After 1 year or never: 0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Consequences enacted after findings published</p>
+</td>
+<td>
+<p>1.5x</p>
+</td>
+<td>
+<p>Within 3 months of findings: 5. Within 1 year: 3. Within 3 years: 1. After 3 years or never: 0 (weighted higher — delay in consequences is most damaging to accountability)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Reform enacted after failure documented</p>
+</td>
+<td>
+<p>1x</p>
+</td>
+<td>
+<p>Within 1 year: 5. Within 3 years: 3. Within 5 years: 1. After 5 years or never: 0 (reform timescales are inherently longer; scoring reflects this)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="doc-p"><b>The Time to Response score is the weighted average of applicable stage scores, rounded to one decimal place. Stages that did not occur (because no investigation was opened, or because no consequences were enacted) are scored 0 and are weighted in the average. This means an accountability process that opened an investigation but never prosecuted anyone does not score well on Time to Response simply because the investigation was fast.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>WORKED EXAMPLE</b><b></b></p>
+<p><b>Scenario:  </b>A procurement failure was publicly documented in an Auditor-General report in January 2020. An EFCC investigation was announced in June 2020 (5 months — scores 3). Findings were published in March 2022 (21 months after investigation commenced — scores 1). No prosecution was commenced as of the date of publication (scores 0, weighted 1.5x). No reform enacted (scores 0).</p>
+<p><b>Scoring:  </b>Time to Response calculation: Stage 1 (investigation): 3 × 1x = 3. Stage 2 (findings): 1 × 1x = 1. Stage 3 (consequences): 0 × 1.5x = 0. Stage 4 (reform): 0 × 1x = 0. Total weight: 4.5. Weighted total: 4. Score: 4 ÷ 4.5 = 0.89, rounded to 1.0. Time to Response score: 1 out of 5.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
           </section>
-
-          <section class="section" id="section-7-decay-and-rules">
-            <div class="note">Chapters 7–9</div>
-            <h2 class="doc-h2">Decay weighting and scoring rules</h2>
-            <p class="doc-p">
-              The Index is designed to resist gaming. Investigations announced but never concluded, prosecutions commenced but stalled, or reforms enacted only on paper lose score over time through decay weighting. The point is to document reality rather than reward symbolic motion.
-            </p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Decay schedule">
-                <thead>
-                  <tr><th>Trigger</th><th>Decay effect</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Investigation opened but no findings within 36 months</td><td>A1 reduced by 2 points</td></tr>
-                  <tr><td>Investigation opened but no findings within 60 months</td><td>A1 reduced to 0</td></tr>
-                  <tr><td>Prosecution commenced but no judgment within 60 months</td><td>A3 reduced by 2 points</td></tr>
-                  <tr><td>Reform enacted but no implementation evidence within 24 months</td><td>A4 reduced by 1 point</td></tr>
-                  <tr><td>Reform body dissolved or defunded within 36 months</td><td>A4 reduced by 2 points</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="doc-runin"><span class="doc-label">Non-negotiable rule</span><span>No score on any Index dimension may be assigned without a specific primary source cited in the Research File. Where evidence is missing, the score is 0 and the missing source is documented transparently.</span></p>
+          <section class="section" id="chapter-6-the-accountability-deficit-formula">
+            <div class="note">Chapter 6</div>
+            <h2 class="doc-h2">The Accountability Deficit Formula</h2>
+            <h3 class="doc-h3" id="6-6-1-the-formula"><b>6.1  </b><b>The Formula</b><b></b></h3>
+<p class="doc-p"><b>The Accountability Deficit is the primary output of the Index for each case. It is calculated as follows:</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p>Accountability Deficit  =  Impact Score  −  Accountability Score</p>
+<p>Range: −25 (system exceeded accountability expectations) to +25 (complete accountability failure)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="doc-h3" id="6-6-2-interpreting-the-deficit-score"><b>6.2  </b><b>Interpreting the Deficit Score</b><b></b></h3>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Deficit Range</b><b></b></p>
+</td>
+<td>
+<p><b>Classification</b><b></b></p>
+</td>
+<td>
+<p><b>Interpretation</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>20 to 25</p>
+</td>
+<td>
+<p>Critical Deficit</p>
+</td>
+<td>
+<p>The system almost entirely failed to respond to a very serious event. Among the most severe accountability failures documentable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>15 to 19</p>
+</td>
+<td>
+<p>Severe Deficit</p>
+</td>
+<td>
+<p>Very serious event with minimal accountability response. Institutional failure is near-total.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>10 to 14</p>
+</td>
+<td>
+<p>High Deficit</p>
+</td>
+<td>
+<p>Significant event with weak accountability response. Investigation may have occurred but consequences and reform are absent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>5 to 9</p>
+</td>
+<td>
+<p>Moderate Deficit</p>
+</td>
+<td>
+<p>Notable event with partial accountability response. Some institutional action occurred but was incomplete.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>1 to 4</p>
+</td>
+<td>
+<p>Low Deficit</p>
+</td>
+<td>
+<p>Event was responded to with reasonable adequacy, though gaps remain.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>0</p>
+</td>
+<td>
+<p>Balanced</p>
+</td>
+<td>
+<p>Impact and accountability response are in approximate balance.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>−1 to −10</p>
+</td>
+<td>
+<p>Accountability Surplus</p>
+</td>
+<td>
+<p>The system responded more rigorously than the severity of the event strictly required. May indicate institutional overcorrection or disproportionate enforcement.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Below −10</p>
+</td>
+<td>
+<p>Unusual Case</p>
+</td>
+<td>
+<p>Requires Editorial Board review. May indicate that the initial Impact Score was too low, or that exceptional accountability occurred. Document the anomaly.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="doc-h3" id="6-6-3-the-zero-impact-rule"><b>6.3  </b><b>The Zero-Impact Rule</b><b></b></h3>
+<p class="doc-p"><b>Where a case is documented primarily for its positive precedent value — a functioning accountability mechanism, a proactive audit, a successful prosecution initiated by the institution itself before harm occurred — the Impact Score may legitimately be 0 or very low. In such cases, the Accountability Score exceeds the Impact Score, producing a negative deficit (accountability surplus).</b><b></b></p>
+<p class="doc-p"><b>These cases are valuable and are published. They demonstrate that accountability can work. But they are reported separately in the Annual Index Report under the heading 'Positive Accountability Precedents' and are not included in deficit averaging calculations for sector or institutional analysis, since including them would mask accountability failures in the same sector or institution.</b><b></b></p>
+<h3 class="doc-h3" id="6-6-4-the-floor-rule"><b>6.4  </b><b>The Floor Rule</b><b></b></h3>
+<p class="doc-p">The Accountability Deficit is floored at −10 for reporting purposes. Scores below −10 are documented in the Research File and flagged for Editorial Board review, but are reported as −10 in aggregate statistics to prevent outlier cases from distorting sector or institutional averages. The actual calculated score is always visible on the individual case page.</p>
           </section>
-
-          <section class="section" id="section-8-workflow-and-reporting">
-            <div class="note">Chapters 10–16</div>
-            <h2 class="doc-h2">Workflow and reporting</h2>
-            <p class="doc-p">
-              Every published case carries a Visual Accountability Profile so readers can see the accountability shape of the case at a glance. The scoring workflow is deliberately separated: the Research Director assigns the Impact Score first, a different editor assigns the Accountability Score second, both are cross-checked against the Governance Outcome Classification and Pattern Detection Tags, and only then is the deficit calculated.
-            </p>
-            <div class="table-wrap">
-              <table class="doc-table" aria-label="Index outputs">
-                <thead>
-                  <tr><th>Output</th><th>Function</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Visual Accountability Profile</td><td>Six-axis visual summary of each case</td></tr>
-                  <tr><td>Living score updates</td><td>Quarterly and event-triggered score revisions as accountability processes evolve</td></tr>
-                  <tr><td>Institution-Level Profiles</td><td>Published only once five or more cases exist for an institution</td></tr>
-                  <tr><td>Annual Nigeria Accountability Index Report</td><td>Sector, institution, state, administration, political accountability, and annual diagnosis analysis</td></tr>
-                  <tr><td>Protected elements</td><td>The formula, evidence-anchor rule, double-blind scoring, decay schedule, and other core rules cannot be changed without full Editorial Board vote</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="doc-p">
-              The Annual Diagnosis is the report’s most important section. It identifies exactly where accountability breaks down by combining dimension-level score patterns with Pattern Detection Tag analysis. That turns the Index from a database of scores into a diagnostic map of Nigerian accountability failure.
-            </p>
+          <section class="section" id="chapter-7-decay-weighting-how-unfinished-accountability-erodes-over-time">
+            <div class="note">Chapter 7</div>
+            <h2 class="doc-h2">Decay Weighting — How Unfinished Accountability Erodes Over Time</h2>
+            <h3 class="doc-h3" id="7-7-1-the-problem-this-solves"><b>7.1  </b><b>The Problem This Solves</b><b></b></h3>
+<p class="doc-p"><b>An investigation opened is not an investigation completed. An investigation opened and abandoned three years later is, for practical purposes, no accountability at all — and the Archive's scoring must reflect that. Without decay weighting, a government that consistently opens investigations it never intends to conclude would accumulate accountability scores that do not reflect reality: the investigations score points, and the points remain even as the investigations quietly die.</b><b></b></p>
+<p class="doc-p"><b>Decay weighting applies a systematic reduction to accountability scores for process stages that were initiated but not concluded within a defined period. It is the Index's primary protection against gaming.</b><b></b></p>
+<h3 class="doc-h3" id="7-7-2-the-decay-schedule"><b>7.2  </b><b>The Decay Schedule</b><b></b></h3>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Stage and Decay Trigger</b><b></b></p>
+</td>
+<td>
+<p><b>Score Reduction Applied</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Investigation opened (A1 ≥ 1) but no findings published within 36 months of opening</p>
+</td>
+<td>
+<p>A1 score reduced by 2 points. Documented in change log as 'Investigation Decay — 36 months elapsed without findings.'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Investigation opened (A1 ≥ 1) but no findings published within 60 months</p>
+</td>
+<td>
+<p>A1 score reduced to 0. Documented as 'Investigation abandoned — 60 months elapsed without findings.'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Prosecution commenced (A3 ≥ 4) but no judgment within 60 months</p>
+</td>
+<td>
+<p>A3 score reduced by 2 points. Documented as 'Prosecution stalled — 60 months without judgment.'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Reform enacted (A4 ≥ 2) but no implementation evidence within 24 months</p>
+</td>
+<td>
+<p>A4 score reduced by 1 point. Documented as 'Reform unenforced — implementation not evidenced after 24 months.'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Reform enacted (A4 ≥ 4) but implementation body dissolved or defunded within 36 months</p>
+</td>
+<td>
+<p>A4 score reduced by 2 points. Documented as 'Reform reversed.'</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="doc-p"><b>Decay events are documented in the case's change log with the date applied and the primary source evidence triggering the decay (for example, a 36-month anniversary with no published findings on record). Decay is not applied automatically — it requires a Research Director review and a change log entry.</b><b></b></p>
+<h3 class="doc-h3" id="7-7-3-decay-is-not-irreversible"><b>7.3  </b><b>Decay Is Not Irreversible</b><b></b></h3>
+<p class="doc-p"><b>If an investigation that triggered decay subsequently produces findings, the decay is reversed and the score is updated upward. The change log records both the decay and the reversal. This means the Index rewards belated accountability — but records the delay through the Time to Response dimension, which will already reflect that the process was slow.</b><b></b></p>
           </section>
-
+          <section class="section" id="chapter-8-formal-and-political-accountability-keeping-them-distinct">
+            <div class="note">Chapter 8</div>
+            <h2 class="doc-h2">Formal and Political Accountability — Keeping Them Distinct</h2>
+            <h3 class="doc-h3" id="8-8-1-why-the-distinction-matters"><b>8.1  </b><b>Why the Distinction Matters</b><b></b></h3>
+<p class="doc-p"><b>The Accountability Score, as defined in Chapter 5, measures formal institutional accountability: investigations by official bodies, prosecutions by courts, reforms enacted by legislatures or agencies. It does not measure political accountability — officials voted out of office, parties losing elections, officials resigning under public pressure.</b><b></b></p>
+<p class="doc-p"><b>This distinction is maintained because the two forms of accountability are conceptually distinct and empirically different in Nigeria's political history. Conflating them produces distorted scores. If political accountability counted as Consequences, an official whose party lost the next election after a documented governance failure would score identically to an official who was convicted by a court. These are not the same accountability outcomes.</b><b></b></p>
+<h3 class="doc-h3" id="8-8-2-how-political-accountability-is-documented"><b>8.2  </b><b>How Political Accountability Is Documented</b><b></b></h3>
+<p class="doc-p"><b>Political accountability is documented in Archive cases — but in a dedicated field, not in the Accountability Score. Every case that involves named responsible parties who subsequently faced elections, party disciplinary processes, or public resignation includes a Political Accountability Note in the case template. This note records:</b><b></b></p>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>Whether any named responsible party lost an elected office in an election where the documented failure was a documented public issue</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Whether any named responsible party was subject to party disciplinary action in documented connection with the failure</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Whether any named responsible party resigned from public office in documented connection with the failure</i></b><b><i></i></b></li>
+</ul>
+<p class="doc-p"><b>These events are visible on the case page and are included in the Annual Index Report as a separate analysis. But they do not contribute to the Accountability Score used in deficit calculations.</b><b></b></p>
+<h3 class="doc-h3" id="8-8-3-when-political-accountability-substitutes-for-formal-accountability"><b>8.3  </b><b>When Political Accountability Substitutes for Formal Accountability</b><b></b></h3>
+<p class="doc-p"><b>One of the most important findings the Annual Index Report can produce is the pattern of cases where political accountability occurred but formal accountability did not. An official is voted out but not prosecuted. A party loses an election over a documented failure but no institutional reform follows. These patterns reveal something precise about how Nigerian accountability works: the political system can remove people, but the institutional system cannot hold them responsible. That gap — political accountability without formal accountability — is itself a diagnostic finding that the Index is uniquely positioned to document.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-9-scoring-rules-and-evidence-anchors">
+            <div class="note">Chapter 9</div>
+            <h2 class="doc-h2">Scoring Rules and Evidence Anchors</h2>
+            <h3 class="doc-h3" id="9-9-1-the-non-negotiable-rules"><b>9.1  </b><b>The Non-Negotiable Rules</b><b></b></h3>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>THE RULE</b><b></b></p>
+<p>No score on any Index dimension may be assigned without a specific primary source cited in the Research File. The source must state or directly document the fact being scored. A score assigned without a primary source is invalid and must be corrected or removed.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>Every scoring decision is recorded in the Research File alongside the primary source that anchors it</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Where two editors would reasonably score the same dimension differently given the same evidence, the lower score is assigned and the rationale for the lower score is documented; the Editorial Board may review on appeal</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>No single editor may assign both the Impact Score and the Accountability Score for the same case; they must be assigned by different members of the editorial team</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>All scores are reviewed by the Research Director and confirmed by the Editorial Lead before publication</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Where a score is contested by a named responsible party with primary source evidence, the score is placed Under Review and the Editorial Board adjudicates</i></b><b><i></i></b></li>
+</ul>
+<h3 class="doc-h3" id="9-9-2-rounding-and-precision"><b>9.2  </b><b>Rounding and Precision</b><b></b></h3>
+<p class="doc-p"><b>Individual dimension scores are whole numbers (0–5). The Time to Response score (A5) is calculated as a weighted average and rounded to one decimal place. The total Impact Score and total Accountability Score are whole numbers (sums of dimension scores). The Accountability Deficit is a whole number or, where Time to Response produces a decimal, rounded to one decimal place.</b><b></b></p>
+<h3 class="doc-h3" id="9-9-3-handling-missing-evidence"><b>9.3  </b><b>Handling Missing Evidence</b><b></b></h3>
+<p class="doc-p"><b>Where primary source evidence is not available for a dimension, the score for that dimension is 0. The Research File must document: what evidence would establish a score on this dimension; what steps were taken to obtain it; and whether FOI requests were filed. A score of 0 due to missing evidence is different from a score of 0 due to confirmed absence of action — and the Research File must distinguish between them. In the published case, this distinction is visible in the Documentation Availability Note.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-10-the-visual-accountability-profile">
+            <div class="note">Chapter 10</div>
+            <h2 class="doc-h2">The Visual Accountability Profile</h2>
+            <h3 class="doc-h3" id="10-10-1-purpose"><b>10.1  </b><b>Purpose</b><b></b></h3>
+<p class="doc-p"><b>Every published case displays a Visual Accountability Profile — a radar chart showing six dimensions at a glance. The profile makes the most important information about a case immediately readable without requiring the reader to understand index methodology. More importantly, it makes patterns visible across cases when profiles are compared.</b><b></b></p>
+<h3 class="doc-h3" id="10-10-2-the-six-axes"><b>10.2  </b><b>The Six Axes</b><b></b></h3>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Axis</b><b></b></p>
+</td>
+<td>
+<p><b>What It Shows</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Human Impact (0–5)</p>
+</td>
+<td>
+<p>From the Impact Score — Dimension 1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Financial Impact (0–5)</p>
+</td>
+<td>
+<p>From the Impact Score — Dimension 2</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Democratic Impact (0–5)</p>
+</td>
+<td>
+<p>From the Impact Score — Dimension 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Transparency Response (0–5)</p>
+</td>
+<td>
+<p>From the Accountability Score — Dimension A2</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Legal Accountability (0–5)</p>
+</td>
+<td>
+<p>From the Accountability Score — Dimension A3 (Consequences)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Institutional Reform (0–5)</p>
+</td>
+<td>
+<p>From the Accountability Score — Dimension A4</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="doc-p"><b>Note: The profile shows six of the ten total dimensions (three from Impact, three from Accountability). Institutional Impact (D3), Public Trust Impact (D5), Investigation (A1), and Time to Response (A5) are displayed numerically below the profile but not on the radar chart. Six axes are the maximum for radar chart readability. The six displayed are chosen because they are the most intuitively communicable to a general audience.</b><b></b></p>
+<h3 class="doc-h3" id="10-10-3-reading-patterns-across-cases"><b>10.3  </b><b>Reading Patterns Across Cases</b><b></b></h3>
+<p class="doc-p"><b>The Visual Accountability Profile is most powerful when multiple cases are displayed together for a single institution or sector. A consistent pattern of large outer triangles (high impact) with small inner triangles (low accountability) is immediately visible as a sector or institution with a chronic accountability deficit. Specific axis patterns carry specific diagnoses:</b><b></b></p>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>High Transparency, Low Legal Accountability: the institution discloses but does not prosecute. Investigation culture without consequences culture.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>High Investigation, Low Transparency, Low Reform: investigations are opened but findings are suppressed and nothing changes.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>High Human Impact, Zero on all Accountability axes: the most severe pattern — the people were harmed and the system did nothing.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>High Democratic Impact, Low Legal Accountability: democratic rights were violated and no one was held to account.</i></b><b><i></i></b></li>
+</ul>
+<p class="doc-p"><b>These pattern descriptions are not editorial judgments — they are diagnostic observations that follow directly from the scores. The Annual Index Report translates them into policy-relevant findings.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-11-scoring-workflow-how-a-case-receives-its-index-score">
+            <div class="note">Chapter 11</div>
+            <h2 class="doc-h2">Scoring Workflow — How a Case Receives Its Index Score</h2>
+            <h3 class="doc-h3" id="11-11-1-the-sequence"><b>11.1  </b><b>The Sequence</b><b></b></h3>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>Impact Score first. The Research Director assigns all five Impact dimensions with primary source anchors for each. This is completed before the Accountability Score is assigned, to prevent the known accountability outcome from influencing the impact assessment.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Accountability Score second. A different member of the editorial team (not the Research Director) assigns all five Accountability dimensions with primary source anchors. This separation prevents the same editor from inflating accountability scores to reduce deficits they find uncomfortable.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Governance Outcome Classification cross-check. Before deficit calculation, the scoring editor confirms that the Index scores are consistent with the case's Governance Outcome Classification assigned in the Editorial Methodology. A case classified as Institutional Success should not produce a positive Accountability Deficit unless the Impact Score reflects a genuine harm — in which case the classification may need to be revised upward to Institutional Resilience. A case classified as Institutional Breakdown should produce a deficit in the High or Critical range. Inconsistencies between the classification and the Index scores are flagged to the Editorial Lead before proceeding.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Pattern Detection Tags noted. The scoring editor records the case's Pattern Detection Tags in the Index Scoring Form. Tags are not scored numerically — they are metadata for the aggregation layer. But their presence must be confirmed at this stage so that the Annual Diagnosis can draw on complete, consistent tag data.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Cross-check. The Research Director and Editorial Lead both review all ten dimension scores against the cited primary sources. Any score without a valid primary source anchor is returned for correction.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Deficit calculation. The deficit is calculated and checked arithmetically. The classification (Critical / Severe / High / Moderate / Low / Balanced) is assigned.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Editorial Lead sign-off. The Editorial Lead confirms the full Index score before publication.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Tier 3 cases. All cases involving sitting officials require Editorial Board review of Index scores before publication, alongside the Tier 3 publication authorisation process.</i></b><b><i></i></b></li>
+</ul>
+<h3 class="doc-h3" id="11-11-2-the-index-scoring-form"><b>11.2  </b><b>The Index Scoring Form</b><b></b></h3>
+<p class="doc-p"><b>Every published case has a completed Index Scoring Form in its Research File. The Form records: the score for each of the ten dimensions; the primary source anchor for each score; the Governance Outcome Classification with cross-check confirmation; the Pattern Detection Tags recorded; the name of the editor who assigned each score; the date of assignment; the cross-check reviewer; and any dissent from the assigned score with the dissenting editor's reasoning. The Index Scoring Form is retained with the Research File for the same retention period as all Research File documents.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-12-updating-index-scores-as-cases-evolve">
+            <div class="note">Chapter 12</div>
+            <h2 class="doc-h2">Updating Index Scores as Cases Evolve</h2>
+            <h3 class="doc-h3" id="12-12-1-the-living-score-principle"><b>12.1  </b><b>The Living Score Principle</b><b></b></h3>
+<p class="doc-p"><b>The Accountability Score is a living score. It is assigned at publication based on what is known at that point. It is updated as accountability responses develop — investigations conclude, findings are published, prosecutions are commenced or abandoned, reforms are enacted or reversed. Every update is documented in the change log.</b><b></b></p>
+<h3 class="doc-h3" id="12-12-2-triggers-for-score-updates"><b>12.2  </b><b>Triggers for Score Updates</b><b></b></h3>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>A formal investigation that was ongoing is concluded and findings published — A1 and A2 scores are updated</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A prosecution is commenced against a named responsible party — A3 score is updated</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A conviction is recorded — A3 score is updated to maximum</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A case is acquitted — A3 score remains at the prosecution-commenced level; a note records the acquittal</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Legislation is enacted in documented response to the failure — A4 score is updated</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A decay event is triggered — relevant dimension scores are reduced per Chapter 7</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>A decay is reversed when a stalled process resumes — scores are updated upward</i></b><b><i></i></b></li>
+</ul>
+<p class="doc-p"><b>Update triggers are flagged through the Archive's quarterly case review process. The Research Director reviews all Active cases every 12 months specifically looking for developments in their accountability processes. Significant developments trigger an immediate update; routine reviews update at the quarterly mark.</b><b></b></p>
+<h3 class="doc-h3" id="12-12-3-the-accountability-trend"><b>12.3  </b><b>The Accountability Trend</b><b></b></h3>
+<p class="doc-p"><b>Because the Accountability Score is updated over time, each case accumulates an accountability trend — a record of how the deficit changed from the publication date through subsequent updates. This trend is published on the case page and is analysed in the Annual Index Report. Cases where the deficit narrowed significantly over time are evidence that sustained accountability pressure works. Cases where the deficit remained unchanged for five or more years are evidence of structural impunity.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-13-system-level-aggregation-from-case-scores-to-institutional-profiles">
+            <div class="note">Chapter 13</div>
+            <h2 class="doc-h2">System-Level Aggregation — From Case Scores to Institutional Profiles</h2>
+            <h3 class="doc-h3" id="13-13-1-the-aggregation-principle"><b>13.1  </b><b>The Aggregation Principle</b><b></b></h3>
+<p class="doc-p"><b>Individual case scores produce system-level findings when aggregated across shared characteristics: the same institution, the same sector, the same state, the same administration, the same period. Aggregation converts a database of incidents into a diagnostic map of where accountability works and where it does not.</b><b></b></p>
+<p class="doc-p"><b>Aggregation is the moment at which the Archive's most important intellectual contribution becomes visible. A single case of procurement failure is a story. Thirty cases of procurement failure across twelve states, all scoring 0 on Consequences, is a finding about the Nigerian public accountability system.</b><b></b></p>
+<h3 class="doc-h3" id="13-13-2-institution-level-accountability-profile"><b>13.2  </b><b>Institution-Level Accountability Profile</b><b></b></h3>
+<p class="doc-p"><b>Where the Archive has documented five or more cases involving the same institution, an Institution-Level Accountability Profile is generated. The Profile shows:</b><b></b></p>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>The institution's median Impact Score across all documented cases — how serious are the events that occur within its mandate?</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The institution's median Accountability Score — how consistently does it respond to its own failures?</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The institution's median Accountability Deficit — what is the systematic gap?</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The institution's dimension-by-dimension Accountability breakdown — which accountability stages consistently fail? Investigation? Consequences? Reform?</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The institution's Governance Outcome Classification distribution — what proportion of its documented cases are Institutional Success, Resilience, Failure, Misconduct, or Breakdown? An institution that appears 80% in the Failure and Breakdown categories is a different institutional story from one that is 40% Failure but 30% Resilience.</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The institution's trend — is the deficit narrowing or widening across documented cases over time?</i></b><b><i></i></b></li>
+</ul>
+<p class="doc-p"><b>Profiles are published in the Annual Index Report. They are not published for individual institutions until the five-case threshold is reached, to prevent statistically thin data from producing unreliable profiles.</b><b></b></p>
+<h3 class="doc-h3" id="13-13-3-pattern-detection-tag-analysis"><b>13.3  </b><b>Pattern Detection Tag Analysis</b><b></b></h3>
+<p class="doc-p"><b>Pattern Detection Tags (defined in Section 3.4 of the Editorial Methodology) are the second cross-cutting aggregation layer in the Index, alongside sector tags. Where sectors identify the governance domain in which a failure occurred, Pattern Detection Tags identify the mechanism by which it occurred. The distinction is critical for the Annual Diagnosis.</b><b></b></p>
+<p class="doc-p"><b>A Procurement Failure tag appearing exclusively in Procurement and Contracting sector cases suggests a sector-specific problem. A Procurement Failure tag appearing across Health, Education, Infrastructure, and Security sectors simultaneously is a cross-sectoral systemic finding — procurement integrity is failing as a governance mechanism regardless of the policy domain. Pattern tag aggregation makes that finding visible; sector analysis alone cannot.</b><b></b></p>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><b>Pattern Tag Analysis Output</b><b></b></p>
+</td>
+<td>
+<p><b>What It Reveals</b><b></b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Tag frequency by sector</p>
+</td>
+<td>
+<p>Which patterns are sector-specific versus cross-sectoral</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Tag frequency by administration</p>
+</td>
+<td>
+<p>Whether a pattern (e.g. Accountability Evasion, Political Interference) is associated with a specific period of government</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Tag frequency by institution</p>
+</td>
+<td>
+<p>Which institutions are repeatedly associated with the same failure mechanism</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Tag co-occurrence</p>
+</td>
+<td>
+<p>Which patterns consistently appear together — e.g. Budget Non-Implementation and Transparency Failure appearing in 80% of the same cases reveals a specific governance pathology</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Tag trend</p>
+</td>
+<td>
+<p>Whether a pattern is increasing, stable, or declining over the Archive's documented period</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="doc-h3" id="13-13-4-sector-state-and-administration-analysis"><b>13.4  </b><b>Sector, State, and Administration Analysis</b><b></b></h3>
+<p class="doc-p"><b>The same aggregation logic applies at sector level (minimum 10 cases), state level (minimum 8 cases), and administration level (minimum 10 cases across the same administration). These thresholds prevent statistically thin aggregations from being published as findings. Where thresholds have not been reached, the data is presented with explicit notation of the sample size and the caution that it should be interpreted tentatively.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-14-the-nigeria-accountability-index-report">
+            <div class="note">Chapter 14</div>
+            <h2 class="doc-h2">The Nigeria Accountability Index Report</h2>
+            <h3 class="doc-h3" id="14-14-1-publication-schedule"><b>14.1  </b><b>Publication Schedule</b><b></b></h3>
+<p class="doc-p"><b>The Nigeria Accountability Index Report is published annually, beginning in Year 3 of the Archive's operation. Years 1 and 2 are the data accumulation phase: cases are scored, but the dataset is not yet large enough to support statistically meaningful institution or sector-level aggregations. The Year 3 report will cover all cases published since the Archive's launch.</b><b></b></p>
+<p class="doc-p"><b>The delay to Year 3 is deliberate and important. A premature Index report with ten cases would be statistically misleading and would expose the Archive to credible challenge on the basis of sample size. The integrity of the eventual Index depends on the Archive resisting pressure to publish it too early.</b><b></b></p>
+<h3 class="doc-h3" id="14-14-2-report-structure"><b>14.2  </b><b>Report Structure</b><b></b></h3>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>Executive Summary: the most important findings in 500 words or fewer, written for a non-specialist audience</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Nigeria Accountability Overview: the aggregate deficit score across all published cases, with trend analysis year-on-year</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Governance Outcome Distribution: the balance of Institutional Success, Resilience, Failure, Misconduct, and Breakdown classifications across all cases — the Archive's published record of what Nigerian governance looked like in the year under review</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Sector Analysis: accountability deficit by sector, with the five highest and five lowest performing sectors analysed in detail, cross-referenced against their Governance Outcome Classification distribution</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Pattern Detection Analysis: the top five most frequent pattern tags and their cross-sector distribution; tag co-occurrence findings; pattern trends year-on-year</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Institutional Profiles: all institutions meeting the five-case threshold, with full profiles, dimension-by-dimension analysis, and Governance Outcome Classification distribution</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>State Analysis: all states meeting the eight-case threshold, with deficit comparisons and trend analysis</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Administration Analysis: accountability performance by administration, cross-referenced against sectors and institutions</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Political Accountability Analysis: the separate analysis of political accountability outcomes documented in Political Accountability Notes across all cases</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Positive Accountability Precedents: all cases classified as Institutional Success or Resilience, analysed for what made them different and what they reveal about conditions under which Nigerian governance functions</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Where Accountability Breaks Down: the Annual Diagnosis — in which dimension does accountability most consistently fail, and what does Pattern Detection Tag analysis reveal about the mechanism?</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Methodology Notes: any changes to scoring methodology since the previous report, with explanation</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>Limitations: what the dataset overrepresents and underrepresents, and how readers should interpret findings accordingly</i></b><b><i></i></b></li>
+</ul>
+<h3 class="doc-h3" id="14-14-3-the-annual-diagnosis"><b>14.3  </b><b>The Annual Diagnosis</b><b></b></h3>
+<p class="doc-p"><b>The Annual Diagnosis is the most important section of the Report. It answers the question the index was designed to answer: where exactly does accountability break down? From Version 1.1 of the methodology onwards, the Diagnosis is produced by combining two analytical inputs: the dimension-by-dimension breakdown of Accountability Scores across all cases, and the Pattern Detection Tag frequency and co-occurrence analysis.</b><b></b></p>
+<p class="doc-p"><b>The dimension-by-dimension analysis tells you where in the accountability process the system fails. If Investigation (A1) scores are consistently high but Consequences (A3) scores are consistently zero, the diagnosis is: investigations are opened but prosecutions never follow. The system has investigation capacity but not political will to prosecute.</b><b></b></p>
+<p class="doc-p"><b>The Pattern Detection Tag analysis tells you the structural mechanism underneath that failure. If the Accountability Evasion tag and the Political Interference tag both appear with high frequency on the same cases where A3 scores are zero, the diagnosis becomes more specific: prosecutions are not failing because the system lacks capacity — they are failing because political actors are documented as interfering with accountability processes. Those are different problems requiring different policy responses.</b><b></b></p>
+<p class="doc-p"><b>The Annual Diagnosis combines both inputs into a named, evidence-referenced finding. Every diagnosis in the report cites the specific Index scores and Pattern tags that produced it. Every reader can examine the underlying cases. The diagnosis is the synthesis, not the opinion.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-15-bias-controls-specific-to-the-index">
+            <div class="note">Chapter 15</div>
+            <h2 class="doc-h2">Bias Controls Specific to the Index</h2>
+            <h3 class="doc-h3" id="15-15-1-why-the-index-needs-additional-bias-controls"><b>15.1  </b><b>Why the Index Needs Additional Bias Controls</b><b></b></h3>
+<p class="doc-p"><b>The Editorial Methodology (Chapter 23 of the main methodology document) specifies bias controls for the Archive as a whole. The Index requires additional controls specific to the scoring process, because the Index produces rankings and comparisons that are especially vulnerable to appearing politically motivated.</b><b></b></p>
+<h3 class="doc-h3" id="15-15-2-the-six-index-specific-bias-controls"><b>15.2  </b><b>The Six Index-Specific Bias Controls</b><b></b></h3>
+<h4 class="doc-h4"><b>1. Mandatory Double-Blind Scoring</b><b></b></h4>
+<p class="doc-p"><b>As specified in Chapter 11, the Impact Score and Accountability Score must be assigned by different editors. Neither editor knows the other's scores when making their own assessment. Scores are compared only after both are complete. This prevents the known accountability outcome from influencing the impact assessment, and prevents the impact severity from inflating or deflating the accountability assessment.</b><b></b></p>
+<h4 class="doc-h4"><b>2. Administration Balance Audit</b><b></b></h4>
+<p class="doc-p"><b>Every six months, the Research Director audits the distribution of Accountability Deficit scores by administration. If cases from one administration show systematically higher deficits than comparable cases from another — controlling for sector and impact severity — the scoring methodology is reviewed for bias. This does not mean all deficits must be equal across administrations. It means that equivalent events must produce equivalent scores regardless of which administration they occurred under.</b><b></b></p>
+<h4 class="doc-h4"><b>3. Sector Comparability Check</b><b></b></h4>
+<p class="doc-p"><b>Before any sector-level finding is published in the Annual Report, a comparability check confirms that the cases used to produce the finding are comparable in type and evidence quality. A sector that appears to have a high accountability deficit because it contains many cases of a type that structurally scores high on Impact (deaths, constitutional failures) must be distinguished from a sector whose cases score identically to other sectors but received weaker accountability responses.</b><b></b></p>
+<h4 class="doc-h4"><b>4. Published Scoring Rationale</b><b></b></h4>
+<p class="doc-p"><b>The scoring rationale for every dimension of every published case is summarised in a publicly visible Scoring Notes section on the case page. This allows researchers, named responsible parties, and the general public to see exactly why each dimension was scored as it was. Opacity in scoring is the primary vulnerability of any index to charges of bias. Transparency in rationale is the primary defence.</b><b></b></p>
+<h4 class="doc-h4"><b>5. External Audit</b><b></b></h4>
+<p class="doc-p"><b>From Year 2 onwards, a sample of 10% of all scored cases is reviewed annually by an external auditor — an independent researcher or institution with no connection to the Archive — who verifies that the scoring methodology was applied correctly and consistently. The auditor's findings are published in the Annual Index Report.</b><b></b></p>
+<h4 class="doc-h4"><b>6. No Index Score for Cases Under Legal Challenge</b><b></b></h4>
+<p class="doc-p"><b>Where a case is the subject of active legal proceedings that challenge the factual basis of the Archive's entry, the Index score for that case is suspended and displayed as 'Under Legal Review' on the case page. The score is restored when proceedings are resolved. This prevents the Index from appearing to make findings in a matter that a court is actively examining.</b><b></b></p>
+          </section>
+          <section class="section" id="chapter-16-what-cannot-be-changed-without-full-editorial-board-vote">
+            <div class="note">Chapter 16</div>
+            <h2 class="doc-h2">What Cannot Be Changed Without Full Editorial Board Vote</h2>
+            <p class="doc-p"><b>The following elements of the Accountability Index are constitutionally protected in the same manner as the core editorial independence provisions of the Archive Constitution. They may not be amended by the Annual Methodology Review or by any single authority within the project. Amendment requires a two-thirds majority vote of the full Editorial Board, followed by public disclosure of the amendment and its reasons:</b><b></b></p>
+<ul class="doc-list">
+<li><b><i></i></b><b><i>The Accountability Deficit formula — Impact Score minus Accountability Score</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The requirement that every dimension score be anchored to a primary source</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The Double-Blind Scoring rule — Impact and Accountability scores must be assigned by different editors</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The Decay Weighting schedule — the specific timelines and reductions applied to unfinished accountability processes</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The separation of formal and political accountability — political accountability events may not contribute to the Accountability Score</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The minimum case threshold for institutional and sector aggregations</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The requirement for external audit from Year 2</i></b><b><i></i></b></li>
+<li><b><i></i></b><b><i>The suspension of Index scores during active legal proceedings</i></b><b><i></i></b></li>
+</ul>
+<div class="table-wrap"><table class="doc-table">
+<tbody>
+<tr>
+<td>
+<p><br/></p>
+</td>
+<td>
+<p><b>PRINCIPLE</b><b></b></p>
+<p>These protections exist because the Index is the element of the Archive most vulnerable to external pressure. When an institution discovers that it scores badly across multiple cases, the pressure to challenge the methodology — not the evidence — will be intense. These protections ensure that methodology challenges face the same high bar as evidence challenges: they must go through the full Editorial Board, publicly, with documented reasons.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="doc-h4"><b>END OF INSTRUMENT SPECIFICATION</b><b></b></h4>
+<p class="doc-p">The 100 Archive Project  ·  Accountability Index  ·  Version 1.0  ·  2026</p>
+<p class="doc-p">Office of the Citizen  ·  Polymath Pictures  ·  Publicly available for citation and reproduction with attribution</p>
+          </section>
           <footer class="footer">
             <div class="brandline">Source Authority</div>
-            <div>The 100 Archive Project · Accountability Index · Version 1.1 · 2026</div>
+            <div>THE 100 ARCHIVE PROJECT · Accountability Index · Version 1.1</div>
           </footer>
         </main>
       </div>
